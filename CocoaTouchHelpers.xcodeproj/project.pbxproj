@@ -1,0 +1,346 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5D3200FE1AC3B7D800EA228F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3200FD1AC3B7D800EA228F /* AppDelegate.swift */; };
+		5D3201001AC3B7D800EA228F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3200FF1AC3B7D800EA228F /* ViewController.swift */; };
+		5D3201031AC3B7D800EA228F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D3201011AC3B7D800EA228F /* Main.storyboard */; };
+		5D3201051AC3B7D800EA228F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D3201041AC3B7D800EA228F /* Images.xcassets */; };
+		5D3201081AC3B7D800EA228F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D3201061AC3B7D800EA228F /* LaunchScreen.xib */; };
+		5D32012D1AC3B87100EA228F /* CTHDismissAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3201201AC3B87100EA228F /* CTHDismissAnimation.m */; };
+		5D32012E1AC3B87100EA228F /* CTHFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3201221AC3B87100EA228F /* CTHFunctions.m */; };
+		5D32012F1AC3B87100EA228F /* CTHPopAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3201241AC3B87100EA228F /* CTHPopAnimation.m */; };
+		5D3201301AC3B87100EA228F /* CTHPresentAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3201261AC3B87100EA228F /* CTHPresentAnimation.m */; };
+		5D3201311AC3B87200EA228F /* CTHPushAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3201281AC3B87100EA228F /* CTHPushAnimation.m */; };
+		5D3201321AC3B87200EA228F /* NSString+CTH.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D32012A1AC3B87100EA228F /* NSString+CTH.m */; };
+		5D3201331AC3B87200EA228F /* UIViewController+CTH.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D32012C1AC3B87100EA228F /* UIViewController+CTH.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5D3200F81AC3B7D800EA228F /* CocoaTouchHelpers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaTouchHelpers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D3200FC1AC3B7D800EA228F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D3200FD1AC3B7D800EA228F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5D3200FF1AC3B7D800EA228F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5D3201021AC3B7D800EA228F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5D3201041AC3B7D800EA228F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5D3201071AC3B7D800EA228F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		5D32011E1AC3B87100EA228F /* CocoaTouchHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaTouchHelpers.h; sourceTree = "<group>"; };
+		5D32011F1AC3B87100EA228F /* CTHDismissAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTHDismissAnimation.h; sourceTree = "<group>"; };
+		5D3201201AC3B87100EA228F /* CTHDismissAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTHDismissAnimation.m; sourceTree = "<group>"; };
+		5D3201211AC3B87100EA228F /* CTHFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTHFunctions.h; sourceTree = "<group>"; };
+		5D3201221AC3B87100EA228F /* CTHFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTHFunctions.m; sourceTree = "<group>"; };
+		5D3201231AC3B87100EA228F /* CTHPopAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTHPopAnimation.h; sourceTree = "<group>"; };
+		5D3201241AC3B87100EA228F /* CTHPopAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTHPopAnimation.m; sourceTree = "<group>"; };
+		5D3201251AC3B87100EA228F /* CTHPresentAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTHPresentAnimation.h; sourceTree = "<group>"; };
+		5D3201261AC3B87100EA228F /* CTHPresentAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTHPresentAnimation.m; sourceTree = "<group>"; };
+		5D3201271AC3B87100EA228F /* CTHPushAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTHPushAnimation.h; sourceTree = "<group>"; };
+		5D3201281AC3B87100EA228F /* CTHPushAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTHPushAnimation.m; sourceTree = "<group>"; };
+		5D3201291AC3B87100EA228F /* NSString+CTH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CTH.h"; sourceTree = "<group>"; };
+		5D32012A1AC3B87100EA228F /* NSString+CTH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CTH.m"; sourceTree = "<group>"; };
+		5D32012B1AC3B87100EA228F /* UIViewController+CTH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CTH.h"; sourceTree = "<group>"; };
+		5D32012C1AC3B87100EA228F /* UIViewController+CTH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CTH.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5D3200F51AC3B7D800EA228F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5D3200EF1AC3B7D800EA228F = {
+			isa = PBXGroup;
+			children = (
+				5D3200FA1AC3B7D800EA228F /* CocoaTouchHelpers */,
+				5D3200F91AC3B7D800EA228F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5D3200F91AC3B7D800EA228F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D3200F81AC3B7D800EA228F /* CocoaTouchHelpers.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5D3200FA1AC3B7D800EA228F /* CocoaTouchHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				5D3200FD1AC3B7D800EA228F /* AppDelegate.swift */,
+				5D32011D1AC3B87100EA228F /* CocoaTouchHelpers */,
+				5D3201041AC3B7D800EA228F /* Images.xcassets */,
+				5D3201061AC3B7D800EA228F /* LaunchScreen.xib */,
+				5D3201011AC3B7D800EA228F /* Main.storyboard */,
+				5D3200FB1AC3B7D800EA228F /* Supporting Files */,
+				5D3200FF1AC3B7D800EA228F /* ViewController.swift */,
+			);
+			path = CocoaTouchHelpers;
+			sourceTree = "<group>";
+		};
+		5D3200FB1AC3B7D800EA228F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5D3200FC1AC3B7D800EA228F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5D32011D1AC3B87100EA228F /* CocoaTouchHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				5D32011E1AC3B87100EA228F /* CocoaTouchHelpers.h */,
+				5D32011F1AC3B87100EA228F /* CTHDismissAnimation.h */,
+				5D3201201AC3B87100EA228F /* CTHDismissAnimation.m */,
+				5D3201211AC3B87100EA228F /* CTHFunctions.h */,
+				5D3201221AC3B87100EA228F /* CTHFunctions.m */,
+				5D3201231AC3B87100EA228F /* CTHPopAnimation.h */,
+				5D3201241AC3B87100EA228F /* CTHPopAnimation.m */,
+				5D3201251AC3B87100EA228F /* CTHPresentAnimation.h */,
+				5D3201261AC3B87100EA228F /* CTHPresentAnimation.m */,
+				5D3201271AC3B87100EA228F /* CTHPushAnimation.h */,
+				5D3201281AC3B87100EA228F /* CTHPushAnimation.m */,
+				5D3201291AC3B87100EA228F /* NSString+CTH.h */,
+				5D32012A1AC3B87100EA228F /* NSString+CTH.m */,
+				5D32012B1AC3B87100EA228F /* UIViewController+CTH.h */,
+				5D32012C1AC3B87100EA228F /* UIViewController+CTH.m */,
+			);
+			path = CocoaTouchHelpers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5D3200F71AC3B7D800EA228F /* CocoaTouchHelpers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D3201171AC3B7D800EA228F /* Build configuration list for PBXNativeTarget "CocoaTouchHelpers" */;
+			buildPhases = (
+				5D3200F41AC3B7D800EA228F /* Sources */,
+				5D3200F51AC3B7D800EA228F /* Frameworks */,
+				5D3200F61AC3B7D800EA228F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CocoaTouchHelpers;
+			productName = CocoaTouchHelpers;
+			productReference = 5D3200F81AC3B7D800EA228F /* CocoaTouchHelpers.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5D3200F01AC3B7D800EA228F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = felipowsky;
+				TargetAttributes = {
+					5D3200F71AC3B7D800EA228F = {
+						CreatedOnToolsVersion = 6.2;
+					};
+				};
+			};
+			buildConfigurationList = 5D3200F31AC3B7D800EA228F /* Build configuration list for PBXProject "CocoaTouchHelpers" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5D3200EF1AC3B7D800EA228F;
+			productRefGroup = 5D3200F91AC3B7D800EA228F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5D3200F71AC3B7D800EA228F /* CocoaTouchHelpers */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5D3200F61AC3B7D800EA228F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D3201031AC3B7D800EA228F /* Main.storyboard in Resources */,
+				5D3201081AC3B7D800EA228F /* LaunchScreen.xib in Resources */,
+				5D3201051AC3B7D800EA228F /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5D3200F41AC3B7D800EA228F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D3201001AC3B7D800EA228F /* ViewController.swift in Sources */,
+				5D32012E1AC3B87100EA228F /* CTHFunctions.m in Sources */,
+				5D32012F1AC3B87100EA228F /* CTHPopAnimation.m in Sources */,
+				5D3201321AC3B87200EA228F /* NSString+CTH.m in Sources */,
+				5D3200FE1AC3B7D800EA228F /* AppDelegate.swift in Sources */,
+				5D3201311AC3B87200EA228F /* CTHPushAnimation.m in Sources */,
+				5D3201331AC3B87200EA228F /* UIViewController+CTH.m in Sources */,
+				5D3201301AC3B87100EA228F /* CTHPresentAnimation.m in Sources */,
+				5D32012D1AC3B87100EA228F /* CTHDismissAnimation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5D3201011AC3B7D800EA228F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D3201021AC3B7D800EA228F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5D3201061AC3B7D800EA228F /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D3201071AC3B7D800EA228F /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5D3201151AC3B7D800EA228F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5D3201161AC3B7D800EA228F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5D3201181AC3B7D800EA228F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CocoaTouchHelpers/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5D3201191AC3B7D800EA228F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CocoaTouchHelpers/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5D3200F31AC3B7D800EA228F /* Build configuration list for PBXProject "CocoaTouchHelpers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D3201151AC3B7D800EA228F /* Debug */,
+				5D3201161AC3B7D800EA228F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D3201171AC3B7D800EA228F /* Build configuration list for PBXNativeTarget "CocoaTouchHelpers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D3201181AC3B7D800EA228F /* Debug */,
+				5D3201191AC3B7D800EA228F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5D3200F01AC3B7D800EA228F /* Project object */;
+}
