@@ -24,4 +24,6 @@ typedef enum {
 
 - (void)openViewController:(UIViewController *)viewControllerToOpen animation:(CTHAnimation)animation modal:(BOOL)modal completion:(void (^)(void))completion;
 
+- (void)setBackBarButtonItemTitle:(NSString *)title style:(UIBarButtonItemStyle)style;
+
 @end

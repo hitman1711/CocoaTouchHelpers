@@ -62,6 +62,11 @@
     }
 }
 
+- (void)setBackBarButtonItemTitle:(NSString *)title style:(UIBarButtonItemStyle)style
+{
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:title style:style target:nil action:nil];
+}
+
 #pragma mark Getters and Setters
 
 - (CTHAnimation)openAnimation
