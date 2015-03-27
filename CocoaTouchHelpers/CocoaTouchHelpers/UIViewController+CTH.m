@@ -67,6 +67,11 @@
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:title style:style target:nil action:nil];
 }
 
+- (BOOL)shouldPopViewController
+{
+    return YES;
+}
+
 #pragma mark Getters and Setters
 
 - (CTHAnimation)openAnimation

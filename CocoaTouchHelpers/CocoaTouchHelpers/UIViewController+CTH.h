@@ -26,4 +26,6 @@ typedef enum {
 
 - (void)setBackBarButtonItemTitle:(NSString *)title style:(UIBarButtonItemStyle)style;
 
+- (BOOL)shouldPopViewController;
+
 @end
