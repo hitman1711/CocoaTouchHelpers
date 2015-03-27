@@ -29,7 +29,6 @@
 		5D3201021AC3B7D800EA228F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5D3201041AC3B7D800EA228F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5D3201071AC3B7D800EA228F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		5D32011E1AC3B87100EA228F /* CocoaTouchHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaTouchHelpers.h; sourceTree = "<group>"; };
 		5D32011F1AC3B87100EA228F /* CTHDismissAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTHDismissAnimation.h; sourceTree = "<group>"; };
 		5D3201201AC3B87100EA228F /* CTHDismissAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTHDismissAnimation.m; sourceTree = "<group>"; };
 		5D3201211AC3B87100EA228F /* CTHFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTHFunctions.h; sourceTree = "<group>"; };
@@ -98,7 +97,6 @@
 		5D32011D1AC3B87100EA228F /* CocoaTouchHelpers */ = {
 			isa = PBXGroup;
 			children = (
-				5D32011E1AC3B87100EA228F /* CocoaTouchHelpers.h */,
 				5D32011F1AC3B87100EA228F /* CTHDismissAnimation.h */,
 				5D3201201AC3B87100EA228F /* CTHDismissAnimation.m */,
 				5D3201211AC3B87100EA228F /* CTHFunctions.h */,
