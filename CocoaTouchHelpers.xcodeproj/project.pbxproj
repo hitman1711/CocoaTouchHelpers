@@ -19,6 +19,7 @@
 		5D3201311AC3B87200EA228F /* CTHPushAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3201281AC3B87100EA228F /* CTHPushAnimation.m */; };
 		5D3201321AC3B87200EA228F /* NSString+CTH.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D32012A1AC3B87100EA228F /* NSString+CTH.m */; };
 		5D3201331AC3B87200EA228F /* UIViewController+CTH.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D32012C1AC3B87100EA228F /* UIViewController+CTH.m */; };
+		5DF2AF951AC593BD00B2DBEF /* UIApplication+CTH.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF2AF941AC593BD00B2DBEF /* UIApplication+CTH.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		5D32012A1AC3B87100EA228F /* NSString+CTH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CTH.m"; sourceTree = "<group>"; };
 		5D32012B1AC3B87100EA228F /* UIViewController+CTH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CTH.h"; sourceTree = "<group>"; };
 		5D32012C1AC3B87100EA228F /* UIViewController+CTH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CTH.m"; sourceTree = "<group>"; };
+		5DF2AF931AC593BD00B2DBEF /* UIApplication+CTH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+CTH.h"; sourceTree = "<group>"; };
+		5DF2AF941AC593BD00B2DBEF /* UIApplication+CTH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+CTH.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,8 @@
 				5D3201281AC3B87100EA228F /* CTHPushAnimation.m */,
 				5D3201291AC3B87100EA228F /* NSString+CTH.h */,
 				5D32012A1AC3B87100EA228F /* NSString+CTH.m */,
+				5DF2AF931AC593BD00B2DBEF /* UIApplication+CTH.h */,
+				5DF2AF941AC593BD00B2DBEF /* UIApplication+CTH.m */,
 				5D32012B1AC3B87100EA228F /* UIViewController+CTH.h */,
 				5D32012C1AC3B87100EA228F /* UIViewController+CTH.m */,
 			);
@@ -193,6 +198,7 @@
 				5D3201311AC3B87200EA228F /* CTHPushAnimation.m in Sources */,
 				5D3201331AC3B87200EA228F /* UIViewController+CTH.m in Sources */,
 				5D3201301AC3B87100EA228F /* CTHPresentAnimation.m in Sources */,
+				5DF2AF951AC593BD00B2DBEF /* UIApplication+CTH.m in Sources */,
 				5D32012D1AC3B87100EA228F /* CTHDismissAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +343,7 @@
 				5D3201191AC3B7D800EA228F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
