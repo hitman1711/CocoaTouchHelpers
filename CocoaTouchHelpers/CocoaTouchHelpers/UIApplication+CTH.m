@@ -10,7 +10,7 @@
 
 @implementation UIApplication (CTHApplication)
 
-- (void)setStatusBarStyle:(UIStatusBarStyle)style animated:(BOOL)animated
++ (void)setStatusBarStyle:(UIStatusBarStyle)style animated:(BOOL)animated
 {
     [[UIApplication sharedApplication] setStatusBarStyle:style animated:animated];
 }
