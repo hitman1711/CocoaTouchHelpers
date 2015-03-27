@@ -50,7 +50,7 @@
             break;
             
         default: {
-            duration = 0.5;
+            duration = 0.25;
         }
             break;
     }
