@@ -121,8 +121,8 @@
         fromViewController.view.frame = finalFrame;
         
     } completion:^(BOOL finished) {
-        [transitionContext completeTransition:YES];
         [fromViewController.view removeFromSuperview];
+        [transitionContext completeTransition:YES];
         
         if (self.completion) {
             self.completion();

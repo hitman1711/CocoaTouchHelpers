@@ -12,8 +12,10 @@ typedef enum {
     CTHAnimationBottom,
 } CTHAnimation;
 
-@interface UIViewController (CTHViewController) <UIViewControllerTransitioningDelegate, UINavigationControllerDelegate>
+@interface UIViewController (CTHViewController)
 
+@property (nonatomic) CTHAnimation openAnimation;
+@property (nonatomic, copy) void (^openCompletion)(void);
 @property (nonatomic) CTHAnimation closeAnimation;
 @property (nonatomic, copy) void (^closeCompletion)(void);
 

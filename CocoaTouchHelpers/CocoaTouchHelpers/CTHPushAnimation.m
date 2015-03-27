@@ -67,7 +67,7 @@
     
     [toViewController.view layoutIfNeeded];
     
-    UIView *containerView = [transitionContext containerView];
+    UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     
     NSTimeInterval duration = [self transitionDuration:transitionContext];
     
@@ -98,7 +98,7 @@
     
     toViewController.view.frame = initialFrame;
     
-    [containerView addSubview:toViewController.view];
+    [[transitionContext containerView] addSubview:toViewController.view];
     
     [UIView animateWithDuration:duration animations:^{
         
@@ -123,6 +123,7 @@
         toViewController.view.frame = finalFrame;
         
     } completion:^(BOOL finished) {
+        [fromViewController.view removeFromSuperview];
         [transitionContext completeTransition:YES];
         
         if (self.completion) {

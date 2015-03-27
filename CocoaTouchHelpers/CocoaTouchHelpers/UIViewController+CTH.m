@@ -6,17 +6,7 @@
 
 #import <objc/runtime.h>
 
-#import "CTHPresentAnimation.h"
-#import "CTHDismissAnimation.h"
-#import "CTHPushAnimation.h"
-#import "CTHPopAnimation.h"
-
-@interface UIViewController ()
-
-@property (nonatomic) CTHAnimation openAnimation;
-@property (nonatomic, copy) void (^openCompletion)(void);
-
-@end
+#import "CTHTransition.h"
 
 @implementation UIViewController (CTHViewController)
 
@@ -34,70 +24,42 @@
 {
     BOOL present = modal || self.navigationController == nil;
     
-    self.openAnimation = animation;
-    self.openCompletion = completion;
+    viewControllerToOpen.openAnimation = animation;
+    viewControllerToOpen.openCompletion = completion;
     
     switch (animation) {
         case CTHAnimationNone: {
-            self.closeAnimation = CTHAnimationNone;
+            viewControllerToOpen.closeAnimation = CTHAnimationNone;
         }
             break;
         case CTHAnimationBottom: {
-            self.closeAnimation = CTHAnimationTop;
+            viewControllerToOpen.closeAnimation = CTHAnimationTop;
         }
             break;
         case CTHAnimationTop: {
-            self.closeAnimation = CTHAnimationBottom;
+            viewControllerToOpen.closeAnimation = CTHAnimationBottom;
         }
             break;
         case CTHAnimationLeft: {
-            self.closeAnimation = CTHAnimationRight;
+            viewControllerToOpen.closeAnimation = CTHAnimationRight;
         }
             break;
         case CTHAnimationRight: {
-            self.closeAnimation = CTHAnimationLeft;
+            viewControllerToOpen.closeAnimation = CTHAnimationLeft;
         }
             break;
     }
     
-    viewControllerToOpen.transitioningDelegate = self;
+    viewControllerToOpen.transitioningDelegate = [CTHTransition shared];
     
     if (present) {
         viewControllerToOpen.modalPresentationStyle = UIModalPresentationCustom;
         [self presentViewController:viewControllerToOpen animated:YES completion:nil];
     
     } else {
-        self.navigationController.delegate = self;
+        self.navigationController.delegate = [CTHTransition shared];
         [self.navigationController pushViewController:viewControllerToOpen animated:YES];
     }
-}
-
-#pragma mark UIViewControllerTransitioningDelegate
-
-- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
-{
-    return [[CTHPresentAnimation alloc] initWithAnimation:self.openAnimation completion:self.openCompletion];
-}
-
-- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
-{
-    return [[CTHDismissAnimation alloc] initWithAnimation:self.closeAnimation completion:dismissed.closeCompletion];
-}
-
-#pragma mark UINavigationControllerDelegate
-
-- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC
-{
-    id<UIViewControllerAnimatedTransitioning> animation = nil;
-    
-    if (operation == UINavigationControllerOperationPush) {
-        animation = [[CTHPushAnimation alloc] initWithAnimation:self.openAnimation completion:self.openCompletion];
-        
-    } else if (operation == UINavigationControllerOperationPop) {
-        animation = [[CTHPopAnimation alloc] initWithAnimation:self.closeAnimation completion:fromVC.closeCompletion];
-    }
-    
-    return animation;
 }
 
 #pragma mark Getters and Setters

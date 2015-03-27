@@ -1,9 +1,5 @@
 //
 //  UIApplication+CTH.m
-//  CocoaTouchHelpers
-//
-//  Created by felipowsky on 3/27/15.
-//  Copyright (c) 2015 felipowsky. All rights reserved.
 //
 
 #import "UIApplication+CTH.h"
