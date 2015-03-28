@@ -65,8 +65,10 @@
     
     NSTimeInterval duration = [self transitionDuration:transitionContext];
     
-    CGRect initialFrame = fromViewController.view.frame;
-    CGRect finalFrame = fromViewController.view.frame;
+    UIView *containerView = [transitionContext containerView];
+    
+    CGRect initialFrame = containerView.frame;
+    CGRect finalFrame = containerView.frame;
     
     switch (self.animation) {
         case CTHAnimationNone: {

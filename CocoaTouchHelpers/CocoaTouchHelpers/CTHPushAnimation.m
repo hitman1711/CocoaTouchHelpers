@@ -63,16 +63,14 @@
 {
     UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     
-    toViewController.view.frame = [transitionContext finalFrameForViewController:toViewController];
-    
-    [toViewController.view layoutIfNeeded];
-    
     UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     
     NSTimeInterval duration = [self transitionDuration:transitionContext];
     
-    CGRect initialFrame = toViewController.view.frame;
-    CGRect finalFrame = toViewController.view.frame;
+    UIView *containerView = [transitionContext containerView];
+    
+    CGRect initialFrame = containerView.frame;
+    CGRect finalFrame = containerView.frame;
     
     switch (self.animation) {
         case CTHAnimationNone: {
@@ -98,7 +96,7 @@
     
     toViewController.view.frame = initialFrame;
     
-    [[transitionContext containerView] addSubview:toViewController.view];
+    [containerView addSubview:toViewController.view];
     
     [UIView animateWithDuration:duration animations:^{
         
