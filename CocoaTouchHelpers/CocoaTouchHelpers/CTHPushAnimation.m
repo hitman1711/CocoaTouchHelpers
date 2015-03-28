@@ -63,33 +63,36 @@
 {
     UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     
+    toViewController.view.frame = [transitionContext finalFrameForViewController:toViewController];
+    [toViewController.view layoutIfNeeded];
+    
     UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     
     NSTimeInterval duration = [self transitionDuration:transitionContext];
     
     UIView *containerView = [transitionContext containerView];
     
-    CGRect initialFrame = containerView.frame;
-    CGRect finalFrame = containerView.frame;
+    CGRect initialFrame = toViewController.view.frame;
+    CGRect finalFrame = toViewController.view.frame;
     
     switch (self.animation) {
         case CTHAnimationNone: {
         }
             break;
         case CTHAnimationBottom: {
-            initialFrame.origin = CGPointMake(0.0f, -initialFrame.size.height);
+            initialFrame.origin.y = -initialFrame.size.height;
         }
             break;
         case CTHAnimationTop: {
-            initialFrame.origin = CGPointMake(0.0f, initialFrame.size.height);
+            initialFrame.origin.y = initialFrame.size.height;
         }
             break;
         case CTHAnimationLeft: {
-            initialFrame.origin = CGPointMake(initialFrame.size.width, 0.0f);
+            initialFrame.origin.x = initialFrame.size.width;
         }
             break;
         case CTHAnimationRight: {
-            initialFrame.origin = CGPointMake(-initialFrame.size.width, 0.0f);
+            initialFrame.origin.x = -initialFrame.size.width;
         }
             break;
     }

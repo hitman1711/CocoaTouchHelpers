@@ -61,33 +61,36 @@
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext
 {
+    UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    
+    toViewController.view.frame = [transitionContext finalFrameForViewController:toViewController];
+    [toViewController.view layoutIfNeeded];
+    
     UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     
     NSTimeInterval duration = [self transitionDuration:transitionContext];
     
-    UIView *containerView = [transitionContext containerView];
-    
-    CGRect initialFrame = containerView.frame;
-    CGRect finalFrame = containerView.frame;
+    CGRect initialFrame = fromViewController.view.frame;
+    CGRect finalFrame = fromViewController.view.frame;
     
     switch (self.animation) {
         case CTHAnimationNone: {
         }
             break;
         case CTHAnimationBottom: {
-            finalFrame.origin = CGPointMake(0.0f, initialFrame.size.height);
+            finalFrame.origin.y = initialFrame.size.height;
         }
             break;
         case CTHAnimationTop: {
-            finalFrame.origin = CGPointMake(0.0f, -initialFrame.size.height);
+            finalFrame.origin.y = -initialFrame.size.height;
         }
             break;
         case CTHAnimationLeft: {
-            finalFrame.origin = CGPointMake(-initialFrame.size.width, 0.0f);
+            finalFrame.origin.x = -initialFrame.size.width;
         }
             break;
         case CTHAnimationRight: {
-            finalFrame.origin = CGPointMake(initialFrame.size.width, 0.0f);
+            finalFrame.origin.x = initialFrame.size.width;
         }
             break;
     }
@@ -115,8 +118,8 @@
         fromViewController.view.frame = finalFrame;
         
     } completion:^(BOOL finished) {
-        [transitionContext completeTransition:YES];
         [fromViewController.view removeFromSuperview];
+        [transitionContext completeTransition:YES];
         
         if (self.completion) {
             self.completion();
