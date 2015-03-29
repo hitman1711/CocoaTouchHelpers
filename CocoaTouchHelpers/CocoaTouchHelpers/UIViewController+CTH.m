@@ -48,6 +48,14 @@
             viewControllerToOpen.closeAnimation = CTHAnimationLeft;
         }
             break;
+        case CTHAnimationFadeIn: {
+            viewControllerToOpen.closeAnimation = CTHAnimationFadeOut;
+        }
+            break;
+        case CTHAnimationFadeOut: {
+            viewControllerToOpen.closeAnimation = CTHAnimationFadeIn;
+        }
+            break;
     }
     
     viewControllerToOpen.transitioningDelegate = [CTHTransition shared];

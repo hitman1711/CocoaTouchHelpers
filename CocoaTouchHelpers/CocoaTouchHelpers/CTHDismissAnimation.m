@@ -93,6 +93,12 @@
             finalFrame.origin.x = initialFrame.size.width;
         }
             break;
+        case CTHAnimationFadeIn: {
+        }
+            break;
+        case CTHAnimationFadeOut: {
+        }
+            break;
     }
     
     [UIView animateWithDuration:duration animations:^{
@@ -111,6 +117,14 @@
             }
                 break;
             case CTHAnimationRight: {
+            }
+                break;
+            case CTHAnimationFadeIn: {
+                fromViewController.view.alpha = 1.0f;
+            }
+                break;
+            case CTHAnimationFadeOut: {
+                fromViewController.view.alpha = 0.0f;
             }
                 break;
         }

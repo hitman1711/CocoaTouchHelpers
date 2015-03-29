@@ -10,6 +10,8 @@ typedef enum {
     CTHAnimationRight,
     CTHAnimationTop,
     CTHAnimationBottom,
+    CTHAnimationFadeIn,
+    CTHAnimationFadeOut,
 } CTHAnimation;
 
 @interface UIViewController (CTHViewController)

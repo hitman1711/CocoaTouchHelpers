@@ -93,6 +93,13 @@
             initialFrame.origin.x = -initialFrame.size.width;
         }
             break;
+        case CTHAnimationFadeIn: {
+            toViewController.view.alpha = 0.0f;
+        }
+            break;
+        case CTHAnimationFadeOut: {
+        }
+            break;
     }
     
     toViewController.view.frame = initialFrame;
@@ -115,6 +122,14 @@
             }
                 break;
             case CTHAnimationRight: {
+            }
+                break;
+            case CTHAnimationFadeIn: {
+                toViewController.view.alpha = 1.0f;
+            }
+                break;
+            case CTHAnimationFadeOut: {
+                toViewController.view.alpha = 0.0f;
             }
                 break;
         }

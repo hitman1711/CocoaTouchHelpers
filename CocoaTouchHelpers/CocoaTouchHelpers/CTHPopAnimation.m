@@ -95,6 +95,12 @@
             finalFrame.origin.x = initialFrame.size.width;
         }
             break;
+        case CTHAnimationFadeIn: {
+        }
+            break;
+        case CTHAnimationFadeOut: {
+        }
+            break;
     }
     
     [containerView insertSubview:toViewController.view belowSubview:fromViewController.view];
@@ -115,6 +121,14 @@
             }
                 break;
             case CTHAnimationRight: {
+            }
+                break;
+            case CTHAnimationFadeIn: {
+                fromViewController.view.alpha = 1.0f;
+            }
+                break;
+            case CTHAnimationFadeOut: {
+                fromViewController.view.alpha = 0.0f;
             }
                 break;
         }
