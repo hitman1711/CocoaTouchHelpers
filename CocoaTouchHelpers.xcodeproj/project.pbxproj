@@ -26,6 +26,7 @@
 		5D55A2721AC5E8050001AE56 /* CTHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D55A2711AC5E8050001AE56 /* CTHNavigationController.m */; };
 		5D55A2751AC736CD0001AE56 /* CTHTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D55A2741AC736CD0001AE56 /* CTHTextField.m */; };
 		5DF2AF951AC593BD00B2DBEF /* UIApplication+CTH.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF2AF941AC593BD00B2DBEF /* UIApplication+CTH.m */; };
+		5DF393701ACA075B007FF5F6 /* CTHEmptySegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF3936F1ACA075B007FF5F6 /* CTHEmptySegue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,8 @@
 		5D55A2741AC736CD0001AE56 /* CTHTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTHTextField.m; sourceTree = "<group>"; };
 		5DF2AF931AC593BD00B2DBEF /* UIApplication+CTH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+CTH.h"; sourceTree = "<group>"; };
 		5DF2AF941AC593BD00B2DBEF /* UIApplication+CTH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+CTH.m"; sourceTree = "<group>"; };
+		5DF3936E1ACA075B007FF5F6 /* CTHEmptySegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTHEmptySegue.h; sourceTree = "<group>"; };
+		5DF3936F1ACA075B007FF5F6 /* CTHEmptySegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTHEmptySegue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 			children = (
 				5D32011F1AC3B87100EA228F /* CTHDismissAnimation.h */,
 				5D3201201AC3B87100EA228F /* CTHDismissAnimation.m */,
+				5DF3936E1ACA075B007FF5F6 /* CTHEmptySegue.h */,
+				5DF3936F1ACA075B007FF5F6 /* CTHEmptySegue.m */,
 				5D3201211AC3B87100EA228F /* CTHFunctions.h */,
 				5D3201221AC3B87100EA228F /* CTHFunctions.m */,
 				5D55A2671AC5DBCB0001AE56 /* CTHImageView.h */,
@@ -235,6 +240,7 @@
 				5D55A26B1AC5DBCB0001AE56 /* CTHImageView.m in Sources */,
 				5D55A2661AC5CD7D0001AE56 /* CTHTransition.m in Sources */,
 				5D32012D1AC3B87100EA228F /* CTHDismissAnimation.m in Sources */,
+				5DF393701ACA075B007FF5F6 /* CTHEmptySegue.m in Sources */,
 				5D55A2721AC5E8050001AE56 /* CTHNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
