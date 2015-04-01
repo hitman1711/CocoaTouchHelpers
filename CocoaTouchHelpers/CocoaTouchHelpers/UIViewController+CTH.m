@@ -27,35 +27,37 @@
     viewControllerToOpen.openAnimation = animation;
     viewControllerToOpen.openCompletion = completion;
     
-    switch (animation) {
-        case CTHAnimationNone: {
-            viewControllerToOpen.closeAnimation = CTHAnimationNone;
+    if (viewControllerToOpen.closeAnimation == CTHAnimationNone) {
+        switch (animation) {
+            case CTHAnimationNone: {
+                viewControllerToOpen.closeAnimation = CTHAnimationNone;
+            }
+                break;
+            case CTHAnimationBottom: {
+                viewControllerToOpen.closeAnimation = CTHAnimationTop;
+            }
+                break;
+            case CTHAnimationTop: {
+                viewControllerToOpen.closeAnimation = CTHAnimationBottom;
+            }
+                break;
+            case CTHAnimationLeft: {
+                viewControllerToOpen.closeAnimation = CTHAnimationRight;
+            }
+                break;
+            case CTHAnimationRight: {
+                viewControllerToOpen.closeAnimation = CTHAnimationLeft;
+            }
+                break;
+            case CTHAnimationFadeIn: {
+                viewControllerToOpen.closeAnimation = CTHAnimationFadeOut;
+            }
+                break;
+            case CTHAnimationFadeOut: {
+                viewControllerToOpen.closeAnimation = CTHAnimationFadeIn;
+            }
+                break;
         }
-            break;
-        case CTHAnimationBottom: {
-            viewControllerToOpen.closeAnimation = CTHAnimationTop;
-        }
-            break;
-        case CTHAnimationTop: {
-            viewControllerToOpen.closeAnimation = CTHAnimationBottom;
-        }
-            break;
-        case CTHAnimationLeft: {
-            viewControllerToOpen.closeAnimation = CTHAnimationRight;
-        }
-            break;
-        case CTHAnimationRight: {
-            viewControllerToOpen.closeAnimation = CTHAnimationLeft;
-        }
-            break;
-        case CTHAnimationFadeIn: {
-            viewControllerToOpen.closeAnimation = CTHAnimationFadeOut;
-        }
-            break;
-        case CTHAnimationFadeOut: {
-            viewControllerToOpen.closeAnimation = CTHAnimationFadeIn;
-        }
-            break;
     }
     
     viewControllerToOpen.transitioningDelegate = [CTHTransition shared];
