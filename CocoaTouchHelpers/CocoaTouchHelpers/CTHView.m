@@ -14,6 +14,11 @@
         self.layer.cornerRadius = self.cornerRadius;
         self.clipsToBounds = YES;
     }
+    
+    if (self.borderWidth != 0.0f) {
+        self.layer.borderWidth = self.borderWidth;
+        self.layer.borderColor = self.borderColor.CGColor;
+    }
 }
 
 @end
