@@ -19,6 +19,7 @@
 		5D3201311AC3B87200EA228F /* CTHPushAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3201281AC3B87100EA228F /* CTHPushAnimation.m */; };
 		5D3201321AC3B87200EA228F /* NSString+CTH.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D32012A1AC3B87100EA228F /* NSString+CTH.m */; };
 		5D3201331AC3B87200EA228F /* UIViewController+CTH.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D32012C1AC3B87100EA228F /* UIViewController+CTH.m */; };
+		5D37492E1AEE645E0093B69B /* UIColor+CTH.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D37492D1AEE645E0093B69B /* UIColor+CTH.m */; };
 		5D55A2661AC5CD7D0001AE56 /* CTHTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D55A2651AC5CD7D0001AE56 /* CTHTransition.m */; };
 		5D55A26B1AC5DBCB0001AE56 /* CTHImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D55A2681AC5DBCB0001AE56 /* CTHImageView.m */; };
 		5D55A26C1AC5DBCB0001AE56 /* CTHView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D55A26A1AC5DBCB0001AE56 /* CTHView.m */; };
@@ -51,6 +52,8 @@
 		5D32012A1AC3B87100EA228F /* NSString+CTH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CTH.m"; sourceTree = "<group>"; };
 		5D32012B1AC3B87100EA228F /* UIViewController+CTH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CTH.h"; sourceTree = "<group>"; };
 		5D32012C1AC3B87100EA228F /* UIViewController+CTH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CTH.m"; sourceTree = "<group>"; };
+		5D37492C1AEE645E0093B69B /* UIColor+CTH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CTH.h"; sourceTree = "<group>"; };
+		5D37492D1AEE645E0093B69B /* UIColor+CTH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CTH.m"; sourceTree = "<group>"; };
 		5D55A2641AC5CD7D0001AE56 /* CTHTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTHTransition.h; sourceTree = "<group>"; };
 		5D55A2651AC5CD7D0001AE56 /* CTHTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTHTransition.m; sourceTree = "<group>"; };
 		5D55A2671AC5DBCB0001AE56 /* CTHImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTHImageView.h; sourceTree = "<group>"; };
@@ -147,6 +150,8 @@
 				5D32012A1AC3B87100EA228F /* NSString+CTH.m */,
 				5DF2AF931AC593BD00B2DBEF /* UIApplication+CTH.h */,
 				5DF2AF941AC593BD00B2DBEF /* UIApplication+CTH.m */,
+				5D37492C1AEE645E0093B69B /* UIColor+CTH.h */,
+				5D37492D1AEE645E0093B69B /* UIColor+CTH.m */,
 				5D55A26D1AC5DDC20001AE56 /* UIImageView+CTH.h */,
 				5D55A26E1AC5DDC20001AE56 /* UIImageView+CTH.m */,
 				5D32012B1AC3B87100EA228F /* UIViewController+CTH.h */,
@@ -238,6 +243,7 @@
 				5D3201301AC3B87100EA228F /* CTHPresentAnimation.m in Sources */,
 				5DF2AF951AC593BD00B2DBEF /* UIApplication+CTH.m in Sources */,
 				5D55A26B1AC5DBCB0001AE56 /* CTHImageView.m in Sources */,
+				5D37492E1AEE645E0093B69B /* UIColor+CTH.m in Sources */,
 				5D55A2661AC5CD7D0001AE56 /* CTHTransition.m in Sources */,
 				5D32012D1AC3B87100EA228F /* CTHDismissAnimation.m in Sources */,
 				5DF393701ACA075B007FF5F6 /* CTHEmptySegue.m in Sources */,
