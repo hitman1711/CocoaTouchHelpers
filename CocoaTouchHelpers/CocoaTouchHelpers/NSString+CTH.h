@@ -8,5 +8,6 @@
 
 - (NSString *)stringTrimmed;
 - (BOOL)isEmail;
+- (NSString *)md5;
 
 @end
