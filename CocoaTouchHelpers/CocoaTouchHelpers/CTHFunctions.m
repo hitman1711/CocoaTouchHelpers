@@ -21,6 +21,9 @@ BOOL const object_is_empty(id x) {
             NSArray *array = (NSArray *) x;
             empty = array.count < 1;
             
+        } else if ([x isKindOfClass:NSDictionary.class]) {
+            NSDictionary *dictionary = (NSDictionary *) x;
+            empty = dictionary.count < 1;
         }
     }
     
