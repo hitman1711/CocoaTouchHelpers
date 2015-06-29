@@ -7,5 +7,6 @@
 @interface NSData (CTHData)
 
 - (NSString *)md5;
+- (NSString *)hexadecimalString;
 
 @end
