@@ -6,6 +6,7 @@
 #import <UIKit/UIKit.h>
 #import "UIViewController+CTH.h"
 #import "UIApplication+CTH.h"
+#import "UIView+CTH.h"
 #import "NSString+CTH.h"
 #import "NSData+CTH.h"
 #import "UIColor+CTH.h"
