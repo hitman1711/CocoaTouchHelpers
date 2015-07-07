@@ -11,4 +11,5 @@
 #import "NSData+CTH.h"
 #import "UIColor+CTH.h"
 #import "UIImageView+CTH.h"
+#import "Reachability+CTH.h"
 #import "CTHFunctions.h"
