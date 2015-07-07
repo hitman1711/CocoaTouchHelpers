@@ -8,5 +8,6 @@
 
 + (void)startSimpleNotifier;
 + (void)stopSimpleNotifier;
++ (BOOL)isConnected;
 
 @end

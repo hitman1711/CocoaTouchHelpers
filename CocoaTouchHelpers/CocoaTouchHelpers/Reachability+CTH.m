@@ -41,8 +41,23 @@ static Reachability *simpleInstance = nil;
 
 + (void)stopSimpleNotifier
 {
-    if (simpleInstance != nil) {
-        [simpleInstance stopNotifier];
+    @synchronized(self) {
+        if (simpleInstance != nil) {
+            [simpleInstance stopNotifier];
+        }
+    }
+}
+
++ (BOOL)isConnected
+{
+    @synchronized(self) {
+        BOOL connected = NO;
+        
+        if (simpleInstance != nil) {
+            connected = simpleInstance.connected;
+        }
+        
+        return connected;
     }
 }
 
