@@ -6,6 +6,6 @@
 
 @interface NSDate (CTHDate)
 
-+ (instancetype)dateWithTimeIntervalSince1970WithObject:(id)object;
++ (instancetype)dateWithObjectTimeIntervalSince1970:(id)object;
 
 @end
