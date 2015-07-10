@@ -18,4 +18,16 @@
     return [formatter stringFromDate:date];
 }
 
++ (NSDate *)dateFromString:(NSString *)string format:(NSString *)format
+{
+    if (string == nil || string == NULL || [[NSNull null] isEqual:string]) {
+        return nil;
+    }
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = format;
+    
+    return [formatter dateFromString:string];
+}
+
 @end
