@@ -29,6 +29,7 @@
 		5D55A2751AC736CD0001AE56 /* CTHTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D55A2741AC736CD0001AE56 /* CTHTextField.m */; };
 		5D77036C1B4AAE32004172D8 /* UIView+CTH.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D77036B1B4AAE32004172D8 /* UIView+CTH.m */; };
 		5D7703821B4C7060004172D8 /* Reachability+CTH.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7703811B4C7060004172D8 /* Reachability+CTH.m */; };
+		5D7FCE4A1B5EC2040011ECFF /* UIDevice+CTH.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7FCE491B5EC2040011ECFF /* UIDevice+CTH.m */; };
 		5D9ED4561AF26D5F002E5E9F /* NSData+CTH.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9ED4551AF26D5F002E5E9F /* NSData+CTH.m */; };
 		5DBBC3741B4D4B9100FF87A7 /* NSDate+CTH.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBBC3731B4D4B9100FF87A7 /* NSDate+CTH.m */; };
 		5DBBC37A1B4D631400FF87A7 /* NSDateFormatter+CTH.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBBC3791B4D631400FF87A7 /* NSDateFormatter+CTH.m */; };
@@ -78,6 +79,8 @@
 		5D77036B1B4AAE32004172D8 /* UIView+CTH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CTH.m"; sourceTree = "<group>"; };
 		5D7703801B4C7060004172D8 /* Reachability+CTH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Reachability+CTH.h"; sourceTree = "<group>"; };
 		5D7703811B4C7060004172D8 /* Reachability+CTH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Reachability+CTH.m"; sourceTree = "<group>"; };
+		5D7FCE481B5EC2040011ECFF /* UIDevice+CTH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+CTH.h"; sourceTree = "<group>"; };
+		5D7FCE491B5EC2040011ECFF /* UIDevice+CTH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+CTH.m"; sourceTree = "<group>"; };
 		5D9ED4541AF26D5F002E5E9F /* NSData+CTH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CTH.h"; sourceTree = "<group>"; };
 		5D9ED4551AF26D5F002E5E9F /* NSData+CTH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CTH.m"; sourceTree = "<group>"; };
 		5DBBC3721B4D4B9100FF87A7 /* NSDate+CTH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CTH.h"; sourceTree = "<group>"; };
@@ -198,6 +201,8 @@
 				5D77036B1B4AAE32004172D8 /* UIView+CTH.m */,
 				5D32012B1AC3B87100EA228F /* UIViewController+CTH.h */,
 				5D32012C1AC3B87100EA228F /* UIViewController+CTH.m */,
+				5D7FCE481B5EC2040011ECFF /* UIDevice+CTH.h */,
+				5D7FCE491B5EC2040011ECFF /* UIDevice+CTH.m */,
 			);
 			path = CocoaTouchHelpers;
 			sourceTree = "<group>";
@@ -317,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D55A2751AC736CD0001AE56 /* CTHTextField.m in Sources */,
+				5D7FCE4A1B5EC2040011ECFF /* UIDevice+CTH.m in Sources */,
 				5D9ED4561AF26D5F002E5E9F /* NSData+CTH.m in Sources */,
 				5DBBC37A1B4D631400FF87A7 /* NSDateFormatter+CTH.m in Sources */,
 				5D7703821B4C7060004172D8 /* Reachability+CTH.m in Sources */,
