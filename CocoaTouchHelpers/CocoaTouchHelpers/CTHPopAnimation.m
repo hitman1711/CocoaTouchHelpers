@@ -4,6 +4,8 @@
 
 #import "CTHPopAnimation.h"
 
+#import "UIDevice+CTH.h"
+
 @interface CTHPopAnimation ()
 
 @property (nonatomic) CTHAnimation animation;
@@ -138,6 +140,15 @@
     } completion:^(BOOL finished) {
         [fromViewController.view removeFromSuperview];
         [transitionContext completeTransition:YES];
+        
+        UIApplication *application = [UIApplication sharedApplication];
+        id<UIApplicationDelegate> applicationDelegate = application.delegate;
+        
+        if (applicationDelegate && [applicationDelegate respondsToSelector:@selector(application:supportedInterfaceOrientationsForWindow:)]) {
+            NSUInteger supportedOrientations = [applicationDelegate application:application supportedInterfaceOrientationsForWindow:application.keyWindow];
+            
+            [[UIDevice currentDevice] forceOrientationWithSupportedOrientations:supportedOrientations];
+        }
         
         if (self.completion) {
             self.completion();
