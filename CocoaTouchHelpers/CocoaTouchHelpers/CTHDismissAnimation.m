@@ -143,7 +143,7 @@
         if (applicationDelegate && [applicationDelegate respondsToSelector:@selector(application:supportedInterfaceOrientationsForWindow:)]) {
             NSUInteger supportedOrientations = [applicationDelegate application:application supportedInterfaceOrientationsForWindow:application.keyWindow];
             
-            [[UIDevice currentDevice] forceOrientationWithSupportedOrientations:supportedOrientations];
+            [[UIDevice currentDevice] forceOrientationWithSupportedInterfaceOrientations:supportedOrientations];
         }
         
         if (self.completion) {
