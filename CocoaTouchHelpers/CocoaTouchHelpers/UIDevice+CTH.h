@@ -6,6 +6,6 @@
 
 @interface UIDevice (CTHDevice)
 
-- (void)forceOrientationWithSupportedOrientations:(NSUInteger)mask;
+- (void)forceOrientationWithSupportedInterfaceOrientations:(NSUInteger)supportedInterfaceOrientations;
 
 @end
