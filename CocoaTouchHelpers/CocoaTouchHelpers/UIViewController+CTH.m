@@ -77,6 +77,11 @@
     [self closeViewControllerAnimation:self.closeAnimation completion:self.closeCompletion];
 }
 
+- (void)closeViewControllerAnimation:(CTHAnimation)animation
+{
+    [self closeViewControllerAnimation:animation completion:self.closeCompletion];
+}
+
 - (void)closeViewControllerAnimation:(CTHAnimation)animation completion:(void (^)(void))completion
 {
     self.closeAnimation = animation;
