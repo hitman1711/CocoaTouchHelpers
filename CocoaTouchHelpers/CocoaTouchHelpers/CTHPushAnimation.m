@@ -107,6 +107,10 @@
     
     toViewController.view.frame = initialFrame;
     
+    if (fromViewController.willOpen) {
+        fromViewController.willOpen(toViewController);
+    }
+    
     [containerView addSubview:toViewController.view];
     
     [UIView animateWithDuration:duration animations:^{
@@ -138,6 +142,10 @@
         }
         
         toViewController.view.frame = finalFrame;
+        
+        if (fromViewController.isOpening) {
+            fromViewController.isOpening(toViewController);
+        }
         
     } completion:^(BOOL finished) {
         [fromViewController.view removeFromSuperview];

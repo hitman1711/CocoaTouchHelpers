@@ -107,6 +107,10 @@
     
     [containerView insertSubview:toViewController.view belowSubview:fromViewController.view];
     
+    if (toViewController.willClose) {
+        toViewController.willClose(fromViewController);
+    }
+    
     [UIView animateWithDuration:duration animations:^{
         
         switch (self.animation) {
@@ -136,6 +140,10 @@
         }
         
         fromViewController.view.frame = finalFrame;
+        
+        if (toViewController.isClosing) {
+            toViewController.isClosing(fromViewController);
+        }
         
     } completion:^(BOOL finished) {
         [fromViewController.view removeFromSuperview];

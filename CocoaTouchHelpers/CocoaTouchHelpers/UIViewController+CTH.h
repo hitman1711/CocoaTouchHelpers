@@ -20,6 +20,10 @@ typedef enum {
 @property (nonatomic, copy) void (^openCompletion)(void);
 @property (nonatomic) CTHAnimation closeAnimation;
 @property (nonatomic, copy) void (^closeCompletion)(void);
+@property (nonatomic, copy) void (^willOpen)(UIViewController *);
+@property (nonatomic, copy) void (^willClose)(UIViewController *);
+@property (nonatomic, copy) void (^isOpening)(UIViewController *);
+@property (nonatomic, copy) void (^isClosing)(UIViewController *);
 
 + (id)viewControllerInitialStoryboard:(NSString *)name bundle:(NSBundle *)storyboardBundleOrNil;
 + (id)viewControllerWithIdentifier:(NSString *)identifier storyboard:(NSString *)name bundle:(NSBundle *)storyboardBundleOrNil;

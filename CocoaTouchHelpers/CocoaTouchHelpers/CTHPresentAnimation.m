@@ -66,9 +66,11 @@
     toViewController.view.frame = [transitionContext finalFrameForViewController:toViewController];
     [toViewController.view layoutIfNeeded];
     
-    UIView *containerView = [transitionContext containerView];
+    UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     
     NSTimeInterval duration = [self transitionDuration:transitionContext];
+    
+    UIView *containerView = [transitionContext containerView];
     
     CGRect initialFrame = toViewController.view.frame;
     CGRect finalFrame = toViewController.view.frame;
@@ -104,6 +106,10 @@
     
     toViewController.view.frame = initialFrame;
     
+    if (fromViewController.willOpen) {
+        fromViewController.willOpen(toViewController);
+    }
+    
     [containerView addSubview:toViewController.view];
     
     [UIView animateWithDuration:duration animations:^{
@@ -135,6 +141,10 @@
         }
         
         toViewController.view.frame = finalFrame;
+        
+        if (fromViewController.isOpening) {
+            fromViewController.isOpening(toViewController);
+        }
         
     } completion:^(BOOL finished) {
         [transitionContext completeTransition:YES];

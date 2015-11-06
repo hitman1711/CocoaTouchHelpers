@@ -150,4 +150,44 @@
     objc_setAssociatedObject(self, @selector(closeCompletion), closeCompletion, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
+- (void (^)(UIViewController *))willOpen
+{
+    return objc_getAssociatedObject(self, @selector(willOpen));
+}
+
+- (void)setWillOpen:(void (^)(UIViewController *))willOpen
+{
+    objc_setAssociatedObject(self, @selector(willOpen), willOpen, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (void (^)(UIViewController *))willClose
+{
+    return objc_getAssociatedObject(self, @selector(willClose));
+}
+
+- (void)setWillClose:(void (^)(UIViewController *))willClose
+{
+    objc_setAssociatedObject(self, @selector(willClose), willClose, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (void (^)(UIViewController *))isOpening
+{
+    return objc_getAssociatedObject(self, @selector(isOpening));
+}
+
+- (void)setIsOpening:(void (^)(UIViewController *))isOpening
+{
+    objc_setAssociatedObject(self, @selector(isOpening), isOpening, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (void (^)(UIViewController *))isClosing
+{
+    return objc_getAssociatedObject(self, @selector(isClosing));
+}
+
+- (void)setIsClosing:(void (^)(UIViewController *))isClosing
+{
+    objc_setAssociatedObject(self, @selector(isClosing), isClosing, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
 @end
