@@ -8,5 +8,6 @@
 
 - (void)tintImage;
 - (void)tintImageWithTintColor:(UIColor *)tintColor;
+- (void)circleView:(BOOL)activate;
 
 @end
