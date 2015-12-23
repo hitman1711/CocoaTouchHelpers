@@ -29,4 +29,10 @@ NSString *const emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
     return [NSString stringWithFormat:@"%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x", result[0], result[1], result[2], result[3], result[4], result[5], result[6], result[7], result[8], result[9], result[10], result[11], result[12], result[13], result[14], result[15]];
 }
 
+- (NSString *)sanitizeAsFilename
+{
+    NSCharacterSet *illegalSet = [NSCharacterSet characterSetWithCharactersInString:@"/\\?%*|\"<>"];
+    return [[self componentsSeparatedByCharactersInSet:illegalSet] componentsJoinedByString:@""];
+}
+
 @end
