@@ -16,6 +16,37 @@
     return [NSString stringWithFormat:@"%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x", result[0], result[1], result[2], result[3], result[4], result[5], result[6], result[7], result[8], result[9], result[10], result[11], result[12], result[13], result[14], result[15]];
 }
 
+- (NSString *)sha256
+{
+    unsigned char hash[CC_SHA256_DIGEST_LENGTH];
+    
+    if (CC_SHA256(self.bytes, (CC_LONG) self.length, hash)) {
+        NSData *sha2 = [NSData dataWithBytes:hash length:CC_SHA256_DIGEST_LENGTH];
+        
+        NSString *hash = [sha2 description];
+        hash = [hash stringByReplacingOccurrencesOfString:@" " withString:@""];
+        hash = [hash stringByReplacingOccurrencesOfString:@"<" withString:@""];
+        hash = [hash stringByReplacingOccurrencesOfString:@">" withString:@""];
+        
+        NSUInteger keyLength = [hash length];
+        NSString *formattedKey = @"";
+        
+        for (int i = 0; i < keyLength; i += 2) {
+            NSString *substr = [hash substringWithRange:NSMakeRange(i, 2)];
+            
+            if (i != keyLength-2) {
+                substr = [substr stringByAppendingString:@":"];
+            }
+            
+            formattedKey = [formattedKey stringByAppendingString:substr];
+        }
+        
+        return formattedKey;
+    }
+    
+    return nil;
+}
+
 - (NSString *)hexadecimalString
 {
     const unsigned char *dataBuffer = (const unsigned char *)[self bytes];

@@ -9,6 +9,7 @@
 - (NSString *)stringTrimmed;
 - (BOOL)isEmail;
 - (NSString *)md5;
+- (NSString *)sha256;
 - (NSString *)sanitizeAsFilename;
 
 @end
