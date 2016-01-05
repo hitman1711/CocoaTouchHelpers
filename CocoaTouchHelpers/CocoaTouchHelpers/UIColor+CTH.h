@@ -6,7 +6,7 @@
 
 @interface UIColor (CTHColor)
 
-+ (instancetype)colorWithHex:(NSInteger)rgb;
-+ (instancetype)colorWithHex:(NSInteger)rgb alpha:(CGFloat)alpha;
++ (instancetype)cth_colorWithHex:(NSInteger)rgb;
++ (instancetype)cth_colorWithHex:(NSInteger)rgb alpha:(CGFloat)alpha;
 
 @end

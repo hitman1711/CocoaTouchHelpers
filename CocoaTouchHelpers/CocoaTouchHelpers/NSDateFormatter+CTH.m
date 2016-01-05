@@ -6,7 +6,7 @@
 
 @implementation NSDateFormatter (CTHDateFormatter)
 
-+ (NSString *)stringFromDate:(NSDate *)date format:(NSString *)format
++ (NSString *)cth_stringFromDate:(NSDate *)date format:(NSString *)format
 {
     if (date == nil) {
         return @"";
@@ -18,7 +18,7 @@
     return [formatter stringFromDate:date];
 }
 
-+ (NSDate *)dateFromString:(NSString *)string format:(NSString *)format
++ (NSDate *)cth_dateFromString:(NSString *)string format:(NSString *)format
 {
     if (string == nil || string == NULL || [[NSNull null] isEqual:string]) {
         return nil;

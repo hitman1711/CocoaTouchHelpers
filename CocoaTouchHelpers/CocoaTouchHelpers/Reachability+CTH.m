@@ -16,7 +16,7 @@
 
 static Reachability *simpleInstance = nil;
 
-+ (void)startSimpleNotifier
++ (void)cth_startSimpleNotifier
 {
     @synchronized(self) {
         if (simpleInstance == nil) {
@@ -39,7 +39,7 @@ static Reachability *simpleInstance = nil;
     }
 }
 
-+ (void)stopSimpleNotifier
++ (void)cth_stopSimpleNotifier
 {
     @synchronized(self) {
         if (simpleInstance != nil) {
@@ -48,7 +48,7 @@ static Reachability *simpleInstance = nil;
     }
 }
 
-+ (BOOL)isConnected
++ (BOOL)cth_isConnected
 {
     @synchronized(self) {
         BOOL connected = NO;

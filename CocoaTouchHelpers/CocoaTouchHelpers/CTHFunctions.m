@@ -4,13 +4,13 @@
 
 #import "CTHFunctions.h"
 
-BOOL const object_is_null(id x) {
+BOOL const CTHObjectIsNull(id x) {
     return (x == nil) || (x == NULL) || ([[NSNull null] isEqual:x]);
 }
 
-BOOL const object_is_empty(id x) {
+BOOL const CTHObjectIsEmpty(id x) {
     
-    BOOL empty = object_is_null(x);
+    BOOL empty = CTHObjectIsNull(x);
     
     if (!empty) {
         if ([x isKindOfClass:NSString.class]) {
@@ -28,4 +28,13 @@ BOOL const object_is_empty(id x) {
     }
     
     return empty;
+}
+
+id const CTHObject(id object)
+{
+    if (object == nil || object == NULL) {
+        return [NSNull null];
+    }
+    
+    return object;
 }

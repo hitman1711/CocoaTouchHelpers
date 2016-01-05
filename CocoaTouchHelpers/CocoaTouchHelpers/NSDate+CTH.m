@@ -6,7 +6,7 @@
 
 @implementation NSDate (CTHDate)
 
-+ (instancetype)dateWithObjectTimeIntervalSince1970:(id)object
++ (instancetype)cth_dateWithObjectTimeIntervalSince1970:(id)object
 {
     if (object == nil || object == NULL || [[NSNull null] isEqual:object]) {
         return nil;

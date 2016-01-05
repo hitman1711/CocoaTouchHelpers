@@ -4,6 +4,8 @@
 
 #import <Foundation/Foundation.h>
 
-extern BOOL const object_is_null(id x);
+extern BOOL const CTHObjectIsNull(id x);
 
-extern BOOL const object_is_empty(id x);
+extern BOOL const CTHObjectIsEmpty(id x);
+
+extern id const CTHObject(id object);

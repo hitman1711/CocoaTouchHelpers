@@ -25,16 +25,16 @@ typedef enum {
 @property (nonatomic, copy) void (^isOpening)(UIViewController *);
 @property (nonatomic, copy) void (^isClosing)(UIViewController *);
 
-+ (id)viewControllerInitialStoryboard:(NSString *)name bundle:(NSBundle *)storyboardBundleOrNil;
-+ (id)viewControllerWithIdentifier:(NSString *)identifier storyboard:(NSString *)name bundle:(NSBundle *)storyboardBundleOrNil;
++ (id)cth_viewControllerInitialStoryboard:(NSString *)name bundle:(NSBundle *)storyboardBundleOrNil;
++ (id)cth_viewControllerWithIdentifier:(NSString *)identifier storyboard:(NSString *)name bundle:(NSBundle *)storyboardBundleOrNil;
 
-- (void)openViewController:(UIViewController *)viewControllerToOpen animation:(CTHAnimation)animation modal:(BOOL)modal completion:(void (^)(void))completion;
-- (void)closeViewController;
-- (void)closeViewControllerAnimation:(CTHAnimation)animation;
-- (void)closeViewControllerAnimation:(CTHAnimation)animation completion:(void (^)(void))completion;
+- (void)cth_openViewController:(UIViewController *)viewControllerToOpen animation:(CTHAnimation)animation modal:(BOOL)modal completion:(void (^)(void))completion;
+- (void)cth_closeViewController;
+- (void)cth_closeViewControllerAnimation:(CTHAnimation)animation;
+- (void)cth_closeViewControllerAnimation:(CTHAnimation)animation completion:(void (^)(void))completion;
 
-- (void)setBackBarButtonItemTitle:(NSString *)title style:(UIBarButtonItemStyle)style;
+- (void)cth_setBackBarButtonItemTitle:(NSString *)title style:(UIBarButtonItemStyle)style;
 
-- (BOOL)shouldPopViewController;
+- (BOOL)cth_shouldPopViewController;
 
 @end

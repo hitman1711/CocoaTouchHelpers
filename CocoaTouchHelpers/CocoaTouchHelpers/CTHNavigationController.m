@@ -15,8 +15,8 @@
     if (self.viewControllers.count > 0) {
         id viewController = [self.viewControllers lastObject];
         
-        if ([viewController respondsToSelector:@selector(shouldPopViewController)]) {
-            shouldPop = [viewController shouldPopViewController];
+        if ([viewController respondsToSelector:@selector(cth_shouldPopViewController)]) {
+            shouldPop = [viewController cth_shouldPopViewController];
         }
     }
     
@@ -30,8 +30,8 @@
     if (self.viewControllers.count > 0) {
         id viewController = [self.viewControllers lastObject];
         
-        if ([viewController respondsToSelector:@selector(shouldPopViewController)]) {
-            shouldPop = [viewController shouldPopViewController];
+        if ([viewController respondsToSelector:@selector(cth_shouldPopViewController)]) {
+            shouldPop = [viewController cth_shouldPopViewController];
         }
     }
     
@@ -45,8 +45,8 @@
     if (self.viewControllers.count > 0) {
         id viewController = [self.viewControllers lastObject];
         
-        if ([viewController respondsToSelector:@selector(shouldPopViewController)]) {
-            shouldPop = [viewController shouldPopViewController];
+        if ([viewController respondsToSelector:@selector(cth_shouldPopViewController)]) {
+            shouldPop = [viewController cth_shouldPopViewController];
         }
     }
     

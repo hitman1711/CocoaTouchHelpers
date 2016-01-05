@@ -6,8 +6,8 @@
 
 @interface Reachability (CTHReachability)
 
-+ (void)startSimpleNotifier;
-+ (void)stopSimpleNotifier;
-+ (BOOL)isConnected;
++ (void)cth_startSimpleNotifier;
++ (void)cth_stopSimpleNotifier;
++ (BOOL)cth_isConnected;
 
 @end

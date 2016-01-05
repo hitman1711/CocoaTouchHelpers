@@ -6,7 +6,7 @@
 
 @interface NSDateFormatter (CTHDateFormatter)
 
-+ (NSString *)stringFromDate:(NSDate *)date format:(NSString *)format;
-+ (NSDate *)dateFromString:(NSString *)string format:(NSString *)format;
++ (NSString *)cth_stringFromDate:(NSDate *)date format:(NSString *)format;
++ (NSDate *)cth_dateFromString:(NSString *)string format:(NSString *)format;
 
 @end

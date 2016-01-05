@@ -6,8 +6,8 @@
 
 @interface NSData (CTHData)
 
-- (NSString *)md5;
-- (NSString *)sha256;
-- (NSString *)hexadecimalString;
+- (NSString *)cth_md5;
+- (NSString *)cth_sha256;
+- (NSString *)cth_hexadecimalString;
 
 @end

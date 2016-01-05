@@ -6,8 +6,8 @@
 
 @interface UIImageView (CTHImageView)
 
-- (void)tintImage;
-- (void)tintImageWithTintColor:(UIColor *)tintColor;
-- (void)circleView:(BOOL)activate;
+- (void)cth_tintImage;
+- (void)cth_tintImageWithTintColor:(UIColor *)tintColor;
+- (void)cth_circleView:(BOOL)activate;
 
 @end

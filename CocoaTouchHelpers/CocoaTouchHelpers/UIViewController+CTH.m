@@ -10,17 +10,17 @@
 
 @implementation UIViewController (CTHViewController)
 
-+ (id)viewControllerInitialStoryboard:(NSString *)name bundle:(NSBundle *)storyboardBundleOrNil
++ (id)cth_viewControllerInitialStoryboard:(NSString *)name bundle:(NSBundle *)storyboardBundleOrNil
 {
     return [[UIStoryboard storyboardWithName:name bundle:storyboardBundleOrNil] instantiateInitialViewController];
 }
 
-+ (id)viewControllerWithIdentifier:(NSString *)identifier storyboard:(NSString *)name bundle:(NSBundle *)storyboardBundleOrNil
++ (id)cth_viewControllerWithIdentifier:(NSString *)identifier storyboard:(NSString *)name bundle:(NSBundle *)storyboardBundleOrNil
 {
     return [[UIStoryboard storyboardWithName:name bundle:storyboardBundleOrNil] instantiateViewControllerWithIdentifier:identifier];
 }
 
-- (void)openViewController:(UIViewController *)viewControllerToOpen animation:(CTHAnimation)animation modal:(BOOL)modal completion:(void (^)(void))completion
+- (void)cth_openViewController:(UIViewController *)viewControllerToOpen animation:(CTHAnimation)animation modal:(BOOL)modal completion:(void (^)(void))completion
 {
     BOOL present = modal || self.navigationController == nil;
     
@@ -72,17 +72,17 @@
     }
 }
 
-- (void)closeViewController
+- (void)cth_closeViewController
 {
-    [self closeViewControllerAnimation:self.closeAnimation completion:self.closeCompletion];
+    [self cth_closeViewControllerAnimation:self.closeAnimation completion:self.closeCompletion];
 }
 
-- (void)closeViewControllerAnimation:(CTHAnimation)animation
+- (void)cth_closeViewControllerAnimation:(CTHAnimation)animation
 {
-    [self closeViewControllerAnimation:animation completion:self.closeCompletion];
+    [self cth_closeViewControllerAnimation:animation completion:self.closeCompletion];
 }
 
-- (void)closeViewControllerAnimation:(CTHAnimation)animation completion:(void (^)(void))completion
+- (void)cth_closeViewControllerAnimation:(CTHAnimation)animation completion:(void (^)(void))completion
 {
     self.closeAnimation = animation;
     self.closeCompletion = completion;
@@ -98,12 +98,12 @@
     }
 }
 
-- (void)setBackBarButtonItemTitle:(NSString *)title style:(UIBarButtonItemStyle)style
+- (void)cth_setBackBarButtonItemTitle:(NSString *)title style:(UIBarButtonItemStyle)style
 {
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:title style:style target:nil action:nil];
 }
 
-- (BOOL)shouldPopViewController
+- (BOOL)cth_shouldPopViewController
 {
     return YES;
 }

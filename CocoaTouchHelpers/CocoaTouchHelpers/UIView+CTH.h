@@ -6,6 +6,6 @@
 
 @interface UIView (CTHView)
 
-- (id)firstResponder;
+- (id)cth_firstResponder;
 
 @end

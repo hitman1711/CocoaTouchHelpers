@@ -6,24 +6,24 @@
 
 @implementation UIImageView (CTHImageView)
 
-- (void)tintImage
+- (void)cth_tintImage
 {
-    self.image = [self imageTinted];
+    self.image = [self cth_imageTinted];
 }
 
-- (void)tintImageWithTintColor:(UIColor *)tintColor
+- (void)cth_tintImageWithTintColor:(UIColor *)tintColor
 {
     self.tintColor = tintColor;
     
-    [self tintImage];
+    [self cth_tintImage];
 }
 
-- (UIImage *)imageTinted
+- (UIImage *)cth_imageTinted
 {
     return [self.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
 }
 
-- (void)circleView:(BOOL)activate
+- (void)cth_circleView:(BOOL)activate
 {
     if (activate) {
         float size = MIN(self.frame.size.width, self.frame.size.height);
