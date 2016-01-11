@@ -2,7 +2,7 @@
 //  Reachability+CTH.h
 //
 
-#import "Reachability.h"
+#import <Reachability/Reachability.h>
 
 @interface Reachability (CTHReachability)
 
