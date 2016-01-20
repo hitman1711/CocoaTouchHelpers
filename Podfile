@@ -1,3 +1,7 @@
 platform :ios, '8.0'
 
-pod 'Reachability'
+target "CocoaTouchHelpers" do
+    use_frameworks!
+
+    pod 'Reachability'
+end

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		169EC67B4C8DC09CC1264B99 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E820C3F333CDFCFF749D572 /* libPods.a */; };
 		5D3200FE1AC3B7D800EA228F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3200FD1AC3B7D800EA228F /* AppDelegate.swift */; };
 		5D3201001AC3B7D800EA228F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3200FF1AC3B7D800EA228F /* ViewController.swift */; };
 		5D3201031AC3B7D800EA228F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D3201011AC3B7D800EA228F /* Main.storyboard */; };
@@ -33,11 +32,12 @@
 		5DBBC37A1B4D631400FF87A7 /* NSDateFormatter+CTH.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBBC3791B4D631400FF87A7 /* NSDateFormatter+CTH.m */; };
 		5DF2AF951AC593BD00B2DBEF /* UIApplication+CTH.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF2AF941AC593BD00B2DBEF /* UIApplication+CTH.m */; };
 		5DF393701ACA075B007FF5F6 /* CTHEmptySegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF3936F1ACA075B007FF5F6 /* CTHEmptySegue.m */; };
+		960E93321E201173D86DCA64 /* Pods_CocoaTouchHelpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F18D4DD701CE409334356FE /* Pods_CocoaTouchHelpers.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		064A646CEBC7EAD260E2DF5E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		4E820C3F333CDFCFF749D572 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F18D4DD701CE409334356FE /* Pods_CocoaTouchHelpers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CocoaTouchHelpers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2712B2E75A89346A57D7CE53 /* Pods-CocoaTouchHelpers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocoaTouchHelpers.release.xcconfig"; path = "Pods/Target Support Files/Pods-CocoaTouchHelpers/Pods-CocoaTouchHelpers.release.xcconfig"; sourceTree = "<group>"; };
 		5D3200F81AC3B7D800EA228F /* CocoaTouchHelpers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaTouchHelpers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D3200FC1AC3B7D800EA228F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D3200FD1AC3B7D800EA228F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 		5DF2AF941AC593BD00B2DBEF /* UIApplication+CTH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+CTH.m"; sourceTree = "<group>"; };
 		5DF3936E1ACA075B007FF5F6 /* CTHEmptySegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTHEmptySegue.h; sourceTree = "<group>"; };
 		5DF3936F1ACA075B007FF5F6 /* CTHEmptySegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTHEmptySegue.m; sourceTree = "<group>"; };
-		DE056847F9E09C10F9AFC97B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		6B6BAEB0ECC72A03AEFF6A4D /* Pods-CocoaTouchHelpers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocoaTouchHelpers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CocoaTouchHelpers/Pods-CocoaTouchHelpers.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,17 +94,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				169EC67B4C8DC09CC1264B99 /* libPods.a in Frameworks */,
+				960E93321E201173D86DCA64 /* Pods_CocoaTouchHelpers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		25254006C6BF83BA176FA186 /* Frameworks */ = {
+		0894A8DFBAB084F91449B1C4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4E820C3F333CDFCFF749D572 /* libPods.a */,
+				6B6BAEB0ECC72A03AEFF6A4D /* Pods-CocoaTouchHelpers.debug.xcconfig */,
+				2712B2E75A89346A57D7CE53 /* Pods-CocoaTouchHelpers.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		47FE9C30A293B1928CE65585 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F18D4DD701CE409334356FE /* Pods_CocoaTouchHelpers.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -114,8 +123,8 @@
 			children = (
 				5D3200FA1AC3B7D800EA228F /* CocoaTouchHelpers */,
 				5D3200F91AC3B7D800EA228F /* Products */,
-				6CE9054AE47BBE0D94AE95E3 /* Pods */,
-				25254006C6BF83BA176FA186 /* Frameworks */,
+				0894A8DFBAB084F91449B1C4 /* Pods */,
+				47FE9C30A293B1928CE65585 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -197,15 +206,6 @@
 			path = CocoaTouchHelpers;
 			sourceTree = "<group>";
 		};
-		6CE9054AE47BBE0D94AE95E3 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				064A646CEBC7EAD260E2DF5E /* Pods.debug.xcconfig */,
-				DE056847F9E09C10F9AFC97B /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -213,11 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D3201171AC3B7D800EA228F /* Build configuration list for PBXNativeTarget "CocoaTouchHelpers" */;
 			buildPhases = (
-				D93274C96C1B0C7A0926B2BC /* Check Pods Manifest.lock */,
+				16B42F80A7F5FE4F01372BC1 /* Check Pods Manifest.lock */,
 				5D3200F41AC3B7D800EA228F /* Sources */,
 				5D3200F51AC3B7D800EA228F /* Frameworks */,
 				5D3200F61AC3B7D800EA228F /* Resources */,
-				D6090186DCDE816C12EE204C /* Copy Pods Resources */,
+				BC7D2289F1939BE1BF6DE783 /* Embed Pods Frameworks */,
+				A51730C015EEC3B1F3F444C1 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -276,22 +277,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		D6090186DCDE816C12EE204C /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D93274C96C1B0C7A0926B2BC /* Check Pods Manifest.lock */ = {
+		16B42F80A7F5FE4F01372BC1 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -304,6 +290,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A51730C015EEC3B1F3F444C1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CocoaTouchHelpers/Pods-CocoaTouchHelpers-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC7D2289F1939BE1BF6DE783 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CocoaTouchHelpers/Pods-CocoaTouchHelpers-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -442,7 +458,7 @@
 		};
 		5D3201181AC3B7D800EA228F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 064A646CEBC7EAD260E2DF5E /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 6B6BAEB0ECC72A03AEFF6A4D /* Pods-CocoaTouchHelpers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CocoaTouchHelpers/Info.plist;
@@ -454,7 +470,7 @@
 		};
 		5D3201191AC3B7D800EA228F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE056847F9E09C10F9AFC97B /* Pods.release.xcconfig */;
+			baseConfigurationReference = 2712B2E75A89346A57D7CE53 /* Pods-CocoaTouchHelpers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CocoaTouchHelpers/Info.plist;

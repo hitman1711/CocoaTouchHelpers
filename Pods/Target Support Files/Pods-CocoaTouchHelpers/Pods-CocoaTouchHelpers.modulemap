@@ -1,0 +1,6 @@
+framework module Pods_CocoaTouchHelpers {
+  umbrella header "Pods-CocoaTouchHelpers-umbrella.h"
+
+  export *
+  module * { export * }
+}
