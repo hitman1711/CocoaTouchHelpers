@@ -38,3 +38,27 @@ id const CTHObject(id object)
     
     return object;
 }
+
+UIAlertController *const CTHAlertOK(NSString *title, NSString *message, void(^actionBlock)(UIAlertAction *action))
+{
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *alertOKAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"OK", @"") style:UIAlertActionStyleCancel handler:actionBlock];
+    
+    [alertController addAction:alertOKAction];
+    
+    return alertController;
+}
+
+UIAlertController *const CTHAlertYesNo(NSString *title, NSString *message, void(^yesBlock)(UIAlertAction *action), void(^noBlock)(UIAlertAction *action))
+{
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *yesAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Sim", @"") style:UIAlertActionStyleDefault handler:yesBlock];
+    [alertController addAction:yesAction];
+    
+    UIAlertAction *noAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Não", @"") style:UIAlertActionStyleCancel handler:noBlock];
+    [alertController addAction:noAction];
+    
+    return alertController;
+}
