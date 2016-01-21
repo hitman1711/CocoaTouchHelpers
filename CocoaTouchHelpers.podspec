@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name = 'CocoaTouchHelpers'
   s.summary = 'Cocoa Touch Helpers'
-  s.version = '1.0.0'
+  s.version = '1.0.1'
   s.license = 'MIT'
   s.authors = { 'Felipe Augusto' => '' }
   s.homepage = 'https://github.com/felipowsky/CocoaTouchHelpers'
