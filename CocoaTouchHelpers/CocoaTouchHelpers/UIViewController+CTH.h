@@ -4,7 +4,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef enum {
+typedef NS_ENUM(NSInteger, CTHAnimation) {
     CTHAnimationNone,
     CTHAnimationLeft,
     CTHAnimationRight,
@@ -12,7 +12,7 @@ typedef enum {
     CTHAnimationBottom,
     CTHAnimationFadeIn,
     CTHAnimationFadeOut,
-} CTHAnimation;
+};
 
 @interface UIViewController (CTHViewController)
 
