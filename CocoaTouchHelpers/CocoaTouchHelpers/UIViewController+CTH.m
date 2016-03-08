@@ -9,12 +9,6 @@
 #import "CTHTransition.h"
 #import "UIResponder+CTH.h"
 
-@interface UIViewController ()
-
-@property (nonatomic, strong) NSNotificationCenter *notificationCenter;
-
-@end
-
 @implementation UIViewController (CTHViewController)
 
 + (void)load
@@ -63,20 +57,16 @@
 
 - (void)registerForKeyboardNotifications
 {
-    if (self.notificationCenter == nil) {
-        self.notificationCenter = [NSNotificationCenter new];
-    }
-    
-    [self.notificationCenter addObserver:self selector:@selector(cth_keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
-    [self.notificationCenter addObserver:self selector:@selector(cth_keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+    [notificationCenter addObserver:self selector:@selector(cth_keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
+    [notificationCenter addObserver:self selector:@selector(cth_keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 }
 
 - (void)deregisterForKeyboardNotifications
 {
-    if (self.notificationCenter != nil) {
-        [self.notificationCenter removeObserver:self name:UIKeyboardDidShowNotification object:nil];
-        [self.notificationCenter removeObserver:self name:UIKeyboardWillHideNotification object:nil];
-    }
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+    [notificationCenter removeObserver:self name:UIKeyboardDidShowNotification object:nil];
+    [notificationCenter removeObserver:self name:UIKeyboardWillHideNotification object:nil];
 }
 
 - (void)cth_keyboardDidShow:(NSNotification*)notification
@@ -86,7 +76,7 @@
     }
     
     NSDictionary* info = [notification userInfo];
-    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
     
     UIScrollView *scrollView = self.cthScrollView;
     
