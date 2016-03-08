@@ -24,6 +24,7 @@ typedef NS_ENUM(NSInteger, CTHAnimation) {
 @property (nonatomic, copy) void (^willClose)(UIViewController *);
 @property (nonatomic, copy) void (^isOpening)(UIViewController *);
 @property (nonatomic, copy) void (^isClosing)(UIViewController *);
+@property (nonatomic, weak) IBOutlet UIScrollView *cthScrollView;
 
 + (id)cth_viewControllerInitialStoryboard:(NSString *)name bundle:(NSBundle *)storyboardBundleOrNil;
 + (id)cth_viewControllerWithIdentifier:(NSString *)identifier storyboard:(NSString *)name bundle:(NSBundle *)storyboardBundleOrNil;

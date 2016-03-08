@@ -7,8 +7,120 @@
 #import <objc/runtime.h>
 
 #import "CTHTransition.h"
+#import "UIResponder+CTH.h"
+
+@interface UIViewController ()
+
+@property (nonatomic, strong) NSNotificationCenter *notificationCenter;
+
+@end
 
 @implementation UIViewController (CTHViewController)
+
++ (void)load
+{
+    static dispatch_once_t onceToken;
+    
+    dispatch_once(&onceToken, ^{
+        Class class = [self class];
+        
+        NSArray *methodsToSwizzle = @[
+                                      @[@"viewWillAppear:", @"cth_viewWillAppear:"],
+                                      @[@"viewWillDisappear:", @"cth_viewWillDisappear:"],
+                                      ];
+        
+        for (NSArray *method in methodsToSwizzle) {
+            SEL originalSelector = NSSelectorFromString(method[0]);
+            SEL swizzledSelector = NSSelectorFromString(method[1]);
+            
+            Method originalMethod = class_getInstanceMethod(class, originalSelector);
+            Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
+            
+            BOOL didAddMethod = class_addMethod(class, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
+            
+            if (didAddMethod) {
+                class_replaceMethod(class, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
+            } else {
+                method_exchangeImplementations(originalMethod, swizzledMethod);
+            }
+        }
+    });
+}
+
+- (void)cth_viewWillAppear:(BOOL)animated
+{
+    [self cth_viewWillAppear:animated];
+    
+    [self registerForKeyboardNotifications];
+}
+
+- (void)cth_viewWillDisappear:(BOOL)animated
+{
+    [self cth_viewWillDisappear:animated];
+    
+    [self deregisterForKeyboardNotifications];
+}
+
+- (void)registerForKeyboardNotifications
+{
+    if (self.notificationCenter == nil) {
+        self.notificationCenter = [NSNotificationCenter new];
+    }
+    
+    [self.notificationCenter addObserver:self selector:@selector(cth_keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
+    [self.notificationCenter addObserver:self selector:@selector(cth_keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+}
+
+- (void)deregisterForKeyboardNotifications
+{
+    if (self.notificationCenter != nil) {
+        [self.notificationCenter removeObserver:self name:UIKeyboardDidShowNotification object:nil];
+        [self.notificationCenter removeObserver:self name:UIKeyboardWillHideNotification object:nil];
+    }
+}
+
+- (void)cth_keyboardDidShow:(NSNotification*)notification
+{
+    if (self.cthScrollView == nil) {
+        return;
+    }
+    
+    NSDictionary* info = [notification userInfo];
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    UIScrollView *scrollView = self.cthScrollView;
+    
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbSize.height, 0.0);
+    scrollView.contentInset = contentInsets;
+    scrollView.scrollIndicatorInsets = contentInsets;
+    
+    id currentResponder = [UIResponder cth_currentFirstResponder];
+    
+    if (currentResponder != nil && [currentResponder isKindOfClass:[UIView class]]) {
+        UIView *viewResponder = (UIView *) currentResponder;
+        
+        // if active responder is hidden by keyboard, scroll it so it's visible
+        CGRect aRect = self.view.frame;
+        aRect.size.height -= kbSize.height;
+        
+        if (!CGRectContainsPoint(aRect, viewResponder.frame.origin) ) {
+            [scrollView scrollRectToVisible:viewResponder.frame animated:YES];
+        }
+    }
+}
+
+- (void)cth_keyboardWillHide:(NSNotification*)notification
+{
+    if (self.cthScrollView == nil) {
+        return;
+    }
+    
+    UIScrollView *scrollView = self.cthScrollView;
+    
+    UIEdgeInsets contentInsets = UIEdgeInsetsZero;
+    scrollView.contentInset = contentInsets;
+    scrollView.scrollIndicatorInsets = contentInsets;
+}
 
 + (id)cth_viewControllerInitialStoryboard:(NSString *)name bundle:(NSBundle *)storyboardBundleOrNil
 {
@@ -188,6 +300,26 @@
 - (void)setIsClosing:(void (^)(UIViewController *))isClosing
 {
     objc_setAssociatedObject(self, @selector(isClosing), isClosing, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (UIScrollView *)cthScrollView
+{
+    return objc_getAssociatedObject(self, @selector(cthScrollView));
+}
+
+- (void)setCthScrollView:(UIScrollView *)cthScrollView
+{
+    objc_setAssociatedObject(self, @selector(cthScrollView), cthScrollView, OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (NSNotificationCenter *)notificationCenter
+{
+    return objc_getAssociatedObject(self, @selector(notificationCenter));
+}
+
+- (void)setNotificationCenter:(NSNotificationCenter *)notificationCenter
+{
+    objc_setAssociatedObject(self, @selector(notificationCenter), notificationCenter, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end

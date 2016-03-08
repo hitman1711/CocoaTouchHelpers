@@ -16,4 +16,5 @@
 #import "UIImageView+CTH.h"
 #import "Reachability+CTH.h"
 #import "UIDevice+CTH.h"
+#import "UIResponder+CTH.h"
 #import "CTHFunctions.h"
