@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.homepage = 'https://github.com/felipowsky/CocoaTouchHelpers'
 
   s.source = { :git => 'https://github.com/felipowsky/CocoaTouchHelpers.git', :tag => "#{s.version}" }
-  s.source_files = 'CocoaTouchHelpers/CocoaTouchHelpers/*.{h,m}'
+  s.source_files = 'CocoaTouchHelpers/CocoaTouchHelpers/*.{h,m,swift}'
   s.requires_arc = true
 
   s.platform = :ios, '8.0'

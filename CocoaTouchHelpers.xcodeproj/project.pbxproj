@@ -23,6 +23,7 @@
 		5D55A2661AC5CD7D0001AE56 /* CTHTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D55A2651AC5CD7D0001AE56 /* CTHTransition.m */; };
 		5D55A26F1AC5DDC20001AE56 /* UIImageView+CTH.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D55A26E1AC5DDC20001AE56 /* UIImageView+CTH.m */; };
 		5D55A2721AC5E8050001AE56 /* CTHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D55A2711AC5E8050001AE56 /* CTHNavigationController.m */; };
+		5D5F4BB51C90D38D00A94FF3 /* String+CTH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5F4BB41C90D38D00A94FF3 /* String+CTH.swift */; };
 		5D77036C1B4AAE32004172D8 /* UIView+CTH.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D77036B1B4AAE32004172D8 /* UIView+CTH.m */; };
 		5D7703821B4C7060004172D8 /* Reachability+CTH.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7703811B4C7060004172D8 /* Reachability+CTH.m */; };
 		5D7FCE4A1B5EC2040011ECFF /* UIDevice+CTH.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7FCE491B5EC2040011ECFF /* UIDevice+CTH.m */; };
@@ -67,6 +68,7 @@
 		5D55A26E1AC5DDC20001AE56 /* UIImageView+CTH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CTH.m"; sourceTree = "<group>"; };
 		5D55A2701AC5E8050001AE56 /* CTHNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTHNavigationController.h; sourceTree = "<group>"; };
 		5D55A2711AC5E8050001AE56 /* CTHNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTHNavigationController.m; sourceTree = "<group>"; };
+		5D5F4BB41C90D38D00A94FF3 /* String+CTH.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+CTH.swift"; sourceTree = "<group>"; };
 		5D77036A1B4AAE32004172D8 /* UIView+CTH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CTH.h"; sourceTree = "<group>"; };
 		5D77036B1B4AAE32004172D8 /* UIView+CTH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CTH.m"; sourceTree = "<group>"; };
 		5D7703801B4C7060004172D8 /* Reachability+CTH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Reachability+CTH.h"; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				5D32012A1AC3B87100EA228F /* NSString+CTH.m */,
 				5D7703801B4C7060004172D8 /* Reachability+CTH.h */,
 				5D7703811B4C7060004172D8 /* Reachability+CTH.m */,
+				5D5F4BB41C90D38D00A94FF3 /* String+CTH.swift */,
 				5DF2AF931AC593BD00B2DBEF /* UIApplication+CTH.h */,
 				5DF2AF941AC593BD00B2DBEF /* UIApplication+CTH.m */,
 				5D37492C1AEE645E0093B69B /* UIColor+CTH.h */,
@@ -335,6 +338,7 @@
 				5D7703821B4C7060004172D8 /* Reachability+CTH.m in Sources */,
 				5D3201001AC3B7D800EA228F /* ViewController.swift in Sources */,
 				5D32012E1AC3B87100EA228F /* CTHFunctions.m in Sources */,
+				5D5F4BB51C90D38D00A94FF3 /* String+CTH.swift in Sources */,
 				5D32012F1AC3B87100EA228F /* CTHPopAnimation.m in Sources */,
 				5D3201321AC3B87200EA228F /* NSString+CTH.m in Sources */,
 				5D3200FE1AC3B7D800EA228F /* AppDelegate.swift in Sources */,
