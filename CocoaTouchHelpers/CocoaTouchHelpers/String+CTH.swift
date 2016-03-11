@@ -14,7 +14,7 @@ extension String {
     
     public var cth_isEmail: Bool {
         get {
-            return NSPredicate(format: "SELF MATCHES \(String.cth_emailRegex)").evaluateWithObject(self)
+            return NSPredicate(format: "SELF MATCHES %@", String.cth_emailRegex).evaluateWithObject(self)
         }
     }
     
