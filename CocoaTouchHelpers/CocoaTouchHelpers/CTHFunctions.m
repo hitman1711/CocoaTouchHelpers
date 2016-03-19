@@ -54,10 +54,10 @@ UIAlertController *const CTHAlertYesNo(NSString *title, NSString *message, void(
 {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction *yesAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Sim", @"") style:UIAlertActionStyleDefault handler:yesBlock];
+    UIAlertAction *yesAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Yes", @"") style:UIAlertActionStyleDefault handler:yesBlock];
     [alertController addAction:yesAction];
     
-    UIAlertAction *noAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Não", @"") style:UIAlertActionStyleCancel handler:noBlock];
+    UIAlertAction *noAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"No", @"") style:UIAlertActionStyleCancel handler:noBlock];
     [alertController addAction:noAction];
     
     return alertController;
