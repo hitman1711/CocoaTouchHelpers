@@ -17,13 +17,8 @@ typedef NS_ENUM(NSInteger, CTHAnimation) {
 @interface UIViewController (CTHViewController)
 
 @property (nonatomic) CTHAnimation openAnimation;
-@property (nonatomic, copy) void (^openCompletion)(void);
 @property (nonatomic) CTHAnimation closeAnimation;
 @property (nonatomic, copy) void (^closeCompletion)(void);
-@property (nonatomic, copy) void (^willOpen)(UIViewController *);
-@property (nonatomic, copy) void (^willClose)(UIViewController *);
-@property (nonatomic, copy) void (^isOpening)(UIViewController *);
-@property (nonatomic, copy) void (^isClosing)(UIViewController *);
 @property (nonatomic, weak) IBOutlet UIScrollView *cthScrollView;
 
 + (id)cth_viewControllerInitialStoryboard:(NSString *)name bundle:(NSBundle *)storyboardBundleOrNil;
@@ -32,6 +27,7 @@ typedef NS_ENUM(NSInteger, CTHAnimation) {
 - (void)cth_openViewController:(UIViewController *)viewControllerToOpen animation:(CTHAnimation)animation modal:(BOOL)modal completion:(void (^)(void))completion;
 - (void)cth_closeViewController;
 - (void)cth_closeViewControllerAnimation:(CTHAnimation)animation;
+- (void)cth_closeViewControllerCompletion:(void (^)(void))completion;
 - (void)cth_closeViewControllerAnimation:(CTHAnimation)animation completion:(void (^)(void))completion;
 
 - (void)cth_setBackBarButtonItemTitle:(NSString *)title style:(UIBarButtonItemStyle)style;

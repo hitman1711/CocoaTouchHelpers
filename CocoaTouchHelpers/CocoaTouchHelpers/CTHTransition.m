@@ -30,12 +30,12 @@ static CTHTransition *instance = nil;
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
 {
-    return [[CTHPresentAnimation alloc] initWithAnimation:presented.openAnimation completion:presented.openCompletion];
+    return [[CTHPresentAnimation alloc] initWithAnimation:presented.openAnimation];
 }
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
 {
-    return [[CTHDismissAnimation alloc] initWithAnimation:dismissed.closeAnimation completion:dismissed.closeCompletion];
+    return [[CTHDismissAnimation alloc] initWithAnimation:dismissed.closeAnimation];
 }
 
 #pragma mark UINavigationControllerDelegate
@@ -45,10 +45,10 @@ static CTHTransition *instance = nil;
     id<UIViewControllerAnimatedTransitioning> animation = nil;
     
     if (operation == UINavigationControllerOperationPush) {
-        animation = [[CTHPushAnimation alloc] initWithAnimation:toVC.openAnimation completion:toVC.openCompletion];
+        animation = [[CTHPushAnimation alloc] initWithAnimation:toVC.openAnimation];
         
     } else if (operation == UINavigationControllerOperationPop) {
-        animation = [[CTHPopAnimation alloc] initWithAnimation:fromVC.closeAnimation completion:fromVC.closeCompletion];
+        animation = [[CTHPopAnimation alloc] initWithAnimation:fromVC.closeAnimation];
     }
     
     return animation;

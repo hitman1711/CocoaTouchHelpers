@@ -89,7 +89,7 @@
     if (currentResponder != nil && [currentResponder isKindOfClass:[UIView class]]) {
         UIView *viewResponder = (UIView *) currentResponder;
         
-        // if active responder is hidden by keyboard, scroll it so it's visible
+        // if active responder is hidden by keyboard, it will scroll
         CGRect aRect = self.view.frame;
         aRect.size.height -= kbSize.height;
         
@@ -127,7 +127,6 @@
     BOOL present = modal || self.navigationController == nil;
     
     viewControllerToOpen.openAnimation = animation;
-    viewControllerToOpen.openCompletion = completion;
     
     if (viewControllerToOpen.closeAnimation == CTHAnimationNone) {
         switch (animation) {
@@ -166,11 +165,15 @@
     
     if (present) {
         viewControllerToOpen.modalPresentationStyle = UIModalPresentationCustom;
-        [self presentViewController:viewControllerToOpen animated:YES completion:nil];
+        [self presentViewController:viewControllerToOpen animated:YES completion:completion];
     
     } else {
         self.navigationController.delegate = [CTHTransition shared];
+        
+        [CATransaction begin];
+        [CATransaction setCompletionBlock:completion];
         [self.navigationController pushViewController:viewControllerToOpen animated:YES];
+        [CATransaction commit];
     }
 }
 
@@ -184,19 +187,47 @@
     [self cth_closeViewControllerAnimation:animation completion:self.closeCompletion];
 }
 
+- (void)cth_closeViewControllerCompletion:(void (^)(void))completion
+{
+    [self cth_closeViewControllerAnimation:self.closeAnimation completion:completion];
+}
+
 - (void)cth_closeViewControllerAnimation:(CTHAnimation)animation completion:(void (^)(void))completion
 {
     self.closeAnimation = animation;
     self.closeCompletion = completion;
     
-    BOOL pop = self.navigationController != nil && self.navigationController.viewControllers.count > 1;
+    UINavigationController *navigationController = self.navigationController;
+    
+    BOOL pop = navigationController != nil && navigationController.viewControllers.count > 1;
     
     if (pop) {
-        [self.navigationController popViewControllerAnimated:YES];
+        void(^closeBlock)() = ^{
+            [CATransaction begin];
+            [CATransaction setCompletionBlock:completion];
+            [navigationController popViewControllerAnimated:YES];
+            [CATransaction commit];
+        };
+        
+        if (navigationController.viewControllers.lastObject == self) {
+            closeBlock();
+        
+        } else if ([navigationController.viewControllers containsObject:self]) {
+            NSUInteger index = [navigationController.viewControllers indexOfObject:self];
+            
+            if (index == 0) {
+                [self.navigationController.presentingViewController dismissViewControllerAnimated:YES completion:completion];
+            } else {
+                UIViewController *viewController = navigationController.viewControllers[index-1];
+                [CATransaction begin];
+                [CATransaction setCompletionBlock:closeBlock];
+                [navigationController popToViewController:viewController animated:YES];
+                [CATransaction commit];
+            }
+        }
     
     } else {
-        [self dismissViewControllerAnimated:YES completion:^{
-        }];
+        [self.presentingViewController dismissViewControllerAnimated:YES completion:completion];
     }
 }
 
@@ -232,16 +263,6 @@
     objc_setAssociatedObject(self, @selector(closeAnimation), [NSNumber numberWithInt:closeAnimation], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (void (^)(void))openCompletion
-{
-    return objc_getAssociatedObject(self, @selector(openCompletion));
-}
-
-- (void)setOpenCompletion:(void (^)(void))openCompletion
-{
-    objc_setAssociatedObject(self, @selector(openCompletion), openCompletion, OBJC_ASSOCIATION_COPY_NONATOMIC);
-}
-
 - (void (^)(void))closeCompletion
 {
     return objc_getAssociatedObject(self, @selector(closeCompletion));
@@ -252,46 +273,6 @@
     objc_setAssociatedObject(self, @selector(closeCompletion), closeCompletion, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
-- (void (^)(UIViewController *))willOpen
-{
-    return objc_getAssociatedObject(self, @selector(willOpen));
-}
-
-- (void)setWillOpen:(void (^)(UIViewController *))willOpen
-{
-    objc_setAssociatedObject(self, @selector(willOpen), willOpen, OBJC_ASSOCIATION_COPY_NONATOMIC);
-}
-
-- (void (^)(UIViewController *))willClose
-{
-    return objc_getAssociatedObject(self, @selector(willClose));
-}
-
-- (void)setWillClose:(void (^)(UIViewController *))willClose
-{
-    objc_setAssociatedObject(self, @selector(willClose), willClose, OBJC_ASSOCIATION_COPY_NONATOMIC);
-}
-
-- (void (^)(UIViewController *))isOpening
-{
-    return objc_getAssociatedObject(self, @selector(isOpening));
-}
-
-- (void)setIsOpening:(void (^)(UIViewController *))isOpening
-{
-    objc_setAssociatedObject(self, @selector(isOpening), isOpening, OBJC_ASSOCIATION_COPY_NONATOMIC);
-}
-
-- (void (^)(UIViewController *))isClosing
-{
-    return objc_getAssociatedObject(self, @selector(isClosing));
-}
-
-- (void)setIsClosing:(void (^)(UIViewController *))isClosing
-{
-    objc_setAssociatedObject(self, @selector(isClosing), isClosing, OBJC_ASSOCIATION_COPY_NONATOMIC);
-}
-
 - (UIScrollView *)cthScrollView
 {
     return objc_getAssociatedObject(self, @selector(cthScrollView));
@@ -300,16 +281,6 @@
 - (void)setCthScrollView:(UIScrollView *)cthScrollView
 {
     objc_setAssociatedObject(self, @selector(cthScrollView), cthScrollView, OBJC_ASSOCIATION_ASSIGN);
-}
-
-- (NSNotificationCenter *)notificationCenter
-{
-    return objc_getAssociatedObject(self, @selector(notificationCenter));
-}
-
-- (void)setNotificationCenter:(NSNotificationCenter *)notificationCenter
-{
-    objc_setAssociatedObject(self, @selector(notificationCenter), notificationCenter, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end

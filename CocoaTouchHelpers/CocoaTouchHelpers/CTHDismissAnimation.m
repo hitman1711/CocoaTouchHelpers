@@ -9,7 +9,6 @@
 @interface CTHDismissAnimation ()
 
 @property (nonatomic) CTHAnimation animation;
-@property (nonatomic, copy) void (^completion)(void);
 
 @end
 
@@ -21,19 +20,17 @@
     
     if (self) {
         self.animation = CTHAnimationNone;
-        self.completion = nil;
     }
     
     return self;
 }
 
-- (id)initWithAnimation:(CTHAnimation)animation completion:(void (^)(void))completion
+- (id)initWithAnimation:(CTHAnimation)animation
 {
     self = [super init];
     
     if (self) {
         self.animation = animation;
-        self.completion = completion;
     }
     
     return self;
@@ -103,10 +100,6 @@
             break;
     }
     
-    if (toViewController.willClose) {
-        toViewController.willClose(fromViewController);
-    }
-    
     [UIView animateWithDuration:duration animations:^{
         
         switch (self.animation) {
@@ -137,10 +130,6 @@
         
         fromViewController.view.frame = finalFrame;
         
-        if (toViewController.isClosing) {
-            toViewController.isClosing(fromViewController);
-        }
-        
     } completion:^(BOOL finished) {
         [fromViewController.view removeFromSuperview];
         [transitionContext completeTransition:YES];
@@ -152,10 +141,6 @@
             NSUInteger supportedOrientations = [applicationDelegate application:application supportedInterfaceOrientationsForWindow:application.keyWindow];
             
             [[UIDevice currentDevice] cth_forceOrientationWithSupportedInterfaceOrientations:supportedOrientations];
-        }
-        
-        if (self.completion) {
-            self.completion();
         }
     }];
 }

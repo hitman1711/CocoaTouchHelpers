@@ -8,6 +8,6 @@
 
 @interface CTHDismissAnimation : NSObject <UIViewControllerAnimatedTransitioning>
 
-- (id)initWithAnimation:(CTHAnimation)animation completion:(void (^)(void))completion;
+- (id)initWithAnimation:(CTHAnimation)animation;
 
 @end

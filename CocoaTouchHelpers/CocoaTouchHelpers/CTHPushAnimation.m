@@ -7,7 +7,6 @@
 @interface CTHPushAnimation ()
 
 @property (nonatomic) CTHAnimation animation;
-@property (nonatomic, copy) void (^completion)(void);
 
 @end
 
@@ -19,19 +18,17 @@
     
     if (self) {
         self.animation = CTHAnimationNone;
-        self.completion = nil;
     }
     
     return self;
 }
 
-- (id)initWithAnimation:(CTHAnimation)animation completion:(void (^)(void))completion
+- (id)initWithAnimation:(CTHAnimation)animation
 {
     self = [super init];
     
     if (self) {
         self.animation = animation;
-        self.completion = completion;
     }
     
     return self;
@@ -107,10 +104,6 @@
     
     toViewController.view.frame = initialFrame;
     
-    if (fromViewController.willOpen) {
-        fromViewController.willOpen(toViewController);
-    }
-    
     [containerView addSubview:toViewController.view];
     
     [UIView animateWithDuration:duration animations:^{
@@ -143,17 +136,9 @@
         
         toViewController.view.frame = finalFrame;
         
-        if (fromViewController.isOpening) {
-            fromViewController.isOpening(toViewController);
-        }
-        
     } completion:^(BOOL finished) {
         [fromViewController.view removeFromSuperview];
         [transitionContext completeTransition:YES];
-        
-        if (self.completion) {
-            self.completion();
-        }
     }];
 }
 
