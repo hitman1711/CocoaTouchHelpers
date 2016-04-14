@@ -1,9 +1,5 @@
 //
 //  String+CTH.swift
-//  Pods
-//
-//  Created by felipowsky on 3/9/16.
-//
 //
 
 import Foundation
