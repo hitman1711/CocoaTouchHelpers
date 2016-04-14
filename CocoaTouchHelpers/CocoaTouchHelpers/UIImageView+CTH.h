@@ -6,8 +6,8 @@
 
 @interface UIImageView (CTHImageView)
 
-- (void)cth_tintImage;
+@property (nonatomic) IBInspectable BOOL cth_tintImage;
+
 - (void)cth_tintImageWithTintColor:(UIColor *)tintColor;
-- (void)cth_circleView:(BOOL)activate;
 
 @end
