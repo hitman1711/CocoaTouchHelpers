@@ -6,6 +6,7 @@
 
 @interface UIView (CTHView)
 
-- (id)cth_firstResponder;
+@property (nonatomic, strong, readonly) UIView *cth_firstResponder;
+@property (nonatomic) IBInspectable BOOL cth_circleView;
 
 @end
