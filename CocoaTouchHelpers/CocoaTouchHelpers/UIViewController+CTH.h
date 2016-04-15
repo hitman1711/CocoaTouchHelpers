@@ -18,19 +18,22 @@ typedef NS_ENUM(NSInteger, CTHAnimation) {
 
 @property (nonatomic) CTHAnimation openAnimation;
 @property (nonatomic) CTHAnimation closeAnimation;
-@property (nonatomic, copy) void (^closeCompletion)(void);
-@property (nonatomic, weak) IBOutlet UIScrollView *cthScrollView;
+@property (nonatomic, copy)  void (^ _Nullable closeCompletion)(void);
+@property (nonatomic, weak) IBOutlet  UIScrollView * _Nullable cthScrollView;
 
-+ (id)cth_viewControllerInitialStoryboard:(NSString *)name bundle:(NSBundle *)storyboardBundleOrNil;
-+ (id)cth_viewControllerWithIdentifier:(NSString *)identifier storyboard:(NSString *)name bundle:(NSBundle *)storyboardBundleOrNil;
++ (nullable UIViewController *)cth_viewControllerInitialStoryboard:(nonnull NSString *)name bundle:(nullable NSBundle *)storyboardBundleOrNil;
++ (nonnull UIViewController *)cth_viewControllerWithIdentifier:(nonnull NSString *)identifier storyboard:(nonnull NSString *)name bundle:(nullable NSBundle *)storyboardBundleOrNil;
 
-- (void)cth_openViewController:(UIViewController *)viewControllerToOpen animation:(CTHAnimation)animation modal:(BOOL)modal completion:(void (^)(void))completion;
+- (void)cth_openViewController:(nonnull UIViewController *)viewControllerToOpen animation:(CTHAnimation)animation;
+- (void)cth_openViewController:(nonnull UIViewController *)viewControllerToOpen animation:(CTHAnimation)animation completion:(nullable void (^)(void))completion;
+- (void)cth_openViewController:(nonnull UIViewController *)viewControllerToOpen animation:(CTHAnimation)animation modal:(BOOL)modal completion:(nullable void (^)(void))completion;
+
 - (void)cth_closeViewController;
 - (void)cth_closeViewControllerAnimation:(CTHAnimation)animation;
-- (void)cth_closeViewControllerCompletion:(void (^)(void))completion;
-- (void)cth_closeViewControllerAnimation:(CTHAnimation)animation completion:(void (^)(void))completion;
+- (void)cth_closeViewControllerCompletion:(nullable void (^)(void))completion;
+- (void)cth_closeViewControllerAnimation:(CTHAnimation)animation completion:(nullable void (^)(void))completion;
 
-- (void)cth_setBackBarButtonItemTitle:(NSString *)title style:(UIBarButtonItemStyle)style;
+- (void)cth_setBackBarButtonItemTitle:(nullable NSString *)title style:(UIBarButtonItemStyle)style;
 
 - (BOOL)cth_shouldPopViewController;
 

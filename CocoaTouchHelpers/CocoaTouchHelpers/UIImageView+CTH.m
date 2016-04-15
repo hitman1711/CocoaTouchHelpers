@@ -38,7 +38,7 @@
     });
 }
 
-- (void)cth_tintImageWithTintColor:(UIColor *)tintColor
+- (void)cth_tintImageWithColor:(UIColor *)tintColor
 {
     self.tintColor = tintColor;
     self.cth_tintImage = YES;

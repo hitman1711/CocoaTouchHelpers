@@ -112,14 +112,24 @@
     scrollView.scrollIndicatorInsets = contentInsets;
 }
 
-+ (id)cth_viewControllerInitialStoryboard:(NSString *)name bundle:(NSBundle *)storyboardBundleOrNil
++ (UIViewController *)cth_viewControllerInitialStoryboard:(NSString *)name bundle:(NSBundle *)storyboardBundleOrNil
 {
     return [[UIStoryboard storyboardWithName:name bundle:storyboardBundleOrNil] instantiateInitialViewController];
 }
 
-+ (id)cth_viewControllerWithIdentifier:(NSString *)identifier storyboard:(NSString *)name bundle:(NSBundle *)storyboardBundleOrNil
++ (UIViewController *)cth_viewControllerWithIdentifier:(NSString *)identifier storyboard:(NSString *)name bundle:(NSBundle *)storyboardBundleOrNil
 {
     return [[UIStoryboard storyboardWithName:name bundle:storyboardBundleOrNil] instantiateViewControllerWithIdentifier:identifier];
+}
+
+- (void)cth_openViewController:(nonnull UIViewController *)viewControllerToOpen animation:(CTHAnimation)animation
+{
+    [self cth_openViewController:viewControllerToOpen animation:animation modal:NO completion:nil];
+}
+
+- (void)cth_openViewController:(nonnull UIViewController *)viewControllerToOpen animation:(CTHAnimation)animation completion:(nullable void (^)(void))completion
+{
+    [self cth_openViewController:viewControllerToOpen animation:animation modal:NO completion:completion];
 }
 
 - (void)cth_openViewController:(UIViewController *)viewControllerToOpen animation:(CTHAnimation)animation modal:(BOOL)modal completion:(void (^)(void))completion
