@@ -18,8 +18,8 @@ typedef NS_ENUM(NSInteger, CTHAnimation) {
 
 @property (nonatomic) CTHAnimation openAnimation;
 @property (nonatomic) CTHAnimation closeAnimation;
-@property (nonatomic, copy)  void (^ _Nullable closeCompletion)(void);
-@property (nonatomic, weak) IBOutlet  UIScrollView * _Nullable cthScrollView;
+@property (nonatomic, copy, nullable)  void (^closeCompletion)(void);
+@property (nonatomic, weak, nullable) IBOutlet  UIScrollView *cthScrollView;
 
 + (nullable UIViewController *)cth_viewControllerInitialStoryboard:(nonnull NSString *)name bundle:(nullable NSBundle *)storyboardBundleOrNil;
 + (nonnull UIViewController *)cth_viewControllerWithIdentifier:(nonnull NSString *)identifier storyboard:(nonnull NSString *)name bundle:(nullable NSBundle *)storyboardBundleOrNil;
