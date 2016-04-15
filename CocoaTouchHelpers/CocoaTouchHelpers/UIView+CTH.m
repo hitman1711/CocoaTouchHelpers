@@ -20,15 +20,6 @@
     }
 }
 
-#pragma mark - Interface Builder
-
-- (void)prepareForInterfaceBuilder
-{
-    [super prepareForInterfaceBuilder];
-    
-    [self cth_configureCircleView:self.cth_circleView];
-}
-
 #pragma mark - Getters and Setters
 
 - (UIView *)cth_firstResponder

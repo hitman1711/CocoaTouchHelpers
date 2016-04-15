@@ -62,18 +62,6 @@
     [self cth_setImage:[image imageWithRenderingMode:self.cth_tintImage ? UIImageRenderingModeAlwaysTemplate : UIImageRenderingModeAlwaysOriginal]];
 }
 
-#pragma mark - Interface Builder
-
-- (void)prepareForInterfaceBuilder
-{
-    [super prepareForInterfaceBuilder];
-    
-    self.layer.borderColor = [UIColor blackColor].CGColor;
-    self.layer.borderWidth = 2;
-    
-    [self cth_configureTintImage:self.cth_tintImage];
-}
-
 #pragma mark - Getters and Setters
 
 - (BOOL)cth_tintImage
