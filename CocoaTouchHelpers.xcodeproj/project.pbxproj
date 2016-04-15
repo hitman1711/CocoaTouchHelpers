@@ -27,7 +27,7 @@
 		5D77036C1B4AAE32004172D8 /* UIView+CTH.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D77036B1B4AAE32004172D8 /* UIView+CTH.m */; };
 		5D7703821B4C7060004172D8 /* Reachability+CTH.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7703811B4C7060004172D8 /* Reachability+CTH.m */; };
 		5D7FCE4A1B5EC2040011ECFF /* UIDevice+CTH.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7FCE491B5EC2040011ECFF /* UIDevice+CTH.m */; };
-		5D8B5B941C3AEB4600C32E28 /* CTHTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8B5B931C3AEB4600C32E28 /* CTHTextField.m */; };
+		5D8B5B941C3AEB4600C32E28 /* UITextField+CTH.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8B5B931C3AEB4600C32E28 /* UITextField+CTH.m */; };
 		5D9ED4561AF26D5F002E5E9F /* NSData+CTH.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9ED4551AF26D5F002E5E9F /* NSData+CTH.m */; };
 		5DBBC3741B4D4B9100FF87A7 /* NSDate+CTH.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBBC3731B4D4B9100FF87A7 /* NSDate+CTH.m */; };
 		5DBBC37A1B4D631400FF87A7 /* NSDateFormatter+CTH.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBBC3791B4D631400FF87A7 /* NSDateFormatter+CTH.m */; };
@@ -75,8 +75,8 @@
 		5D7703811B4C7060004172D8 /* Reachability+CTH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Reachability+CTH.m"; sourceTree = "<group>"; };
 		5D7FCE481B5EC2040011ECFF /* UIDevice+CTH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+CTH.h"; sourceTree = "<group>"; };
 		5D7FCE491B5EC2040011ECFF /* UIDevice+CTH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+CTH.m"; sourceTree = "<group>"; };
-		5D8B5B921C3AEB4600C32E28 /* CTHTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTHTextField.h; sourceTree = "<group>"; };
-		5D8B5B931C3AEB4600C32E28 /* CTHTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTHTextField.m; sourceTree = "<group>"; };
+		5D8B5B921C3AEB4600C32E28 /* UITextField+CTH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+CTH.h"; sourceTree = "<group>"; };
+		5D8B5B931C3AEB4600C32E28 /* UITextField+CTH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+CTH.m"; sourceTree = "<group>"; };
 		5D9ED4541AF26D5F002E5E9F /* NSData+CTH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CTH.h"; sourceTree = "<group>"; };
 		5D9ED4551AF26D5F002E5E9F /* NSData+CTH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CTH.m"; sourceTree = "<group>"; };
 		5DBBC3721B4D4B9100FF87A7 /* NSDate+CTH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CTH.h"; sourceTree = "<group>"; };
@@ -178,8 +178,6 @@
 				5D3201261AC3B87100EA228F /* CTHPresentAnimation.m */,
 				5D3201271AC3B87100EA228F /* CTHPushAnimation.h */,
 				5D3201281AC3B87100EA228F /* CTHPushAnimation.m */,
-				5D8B5B921C3AEB4600C32E28 /* CTHTextField.h */,
-				5D8B5B931C3AEB4600C32E28 /* CTHTextField.m */,
 				5D55A2641AC5CD7D0001AE56 /* CTHTransition.h */,
 				5D55A2651AC5CD7D0001AE56 /* CTHTransition.m */,
 				5D9ED4541AF26D5F002E5E9F /* NSData+CTH.h */,
@@ -201,6 +199,8 @@
 				5D7FCE491B5EC2040011ECFF /* UIDevice+CTH.m */,
 				5D55A26D1AC5DDC20001AE56 /* UIImageView+CTH.h */,
 				5D55A26E1AC5DDC20001AE56 /* UIImageView+CTH.m */,
+				5D8B5B921C3AEB4600C32E28 /* UITextField+CTH.h */,
+				5D8B5B931C3AEB4600C32E28 /* UITextField+CTH.m */,
 				5D77036A1B4AAE32004172D8 /* UIView+CTH.h */,
 				5D77036B1B4AAE32004172D8 /* UIView+CTH.m */,
 				5D32012B1AC3B87100EA228F /* UIViewController+CTH.h */,
@@ -346,7 +346,7 @@
 				5D3201311AC3B87200EA228F /* CTHPushAnimation.m in Sources */,
 				5D3201331AC3B87200EA228F /* UIViewController+CTH.m in Sources */,
 				5DBBC3741B4D4B9100FF87A7 /* NSDate+CTH.m in Sources */,
-				5D8B5B941C3AEB4600C32E28 /* CTHTextField.m in Sources */,
+				5D8B5B941C3AEB4600C32E28 /* UITextField+CTH.m in Sources */,
 				5D3201301AC3B87100EA228F /* CTHPresentAnimation.m in Sources */,
 				5DF2AF951AC593BD00B2DBEF /* UIApplication+CTH.m in Sources */,
 				5D37492E1AEE645E0093B69B /* UIColor+CTH.m in Sources */,

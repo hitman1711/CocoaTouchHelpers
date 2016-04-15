@@ -8,6 +8,6 @@
 
 @property (nonatomic) IBInspectable BOOL cth_tintImage;
 
-- (void)cth_tintImageWithTintColor:(UIColor *)tintColor;
+- (void)cth_tintImageWithColor:(UIColor *)tintColor;
 
 @end
