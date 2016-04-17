@@ -46,7 +46,7 @@
 
 - (void)cth_configureTintImage:(BOOL)activated
 {
-    self.image = [self.image imageWithRenderingMode:activated ? UIImageRenderingModeAlwaysTemplate : UIImageRenderingModeAlwaysOriginal];
+    self.image = [self.image imageWithRenderingMode:activated ? UIImageRenderingModeAlwaysTemplate : UIImageRenderingModeAutomatic];
 }
 
 #pragma mark - Swizzling
@@ -59,7 +59,7 @@
 
 - (void)cth_setImage:(UIImage *)image
 {
-    [self cth_setImage:[image imageWithRenderingMode:self.cth_tintImage ? UIImageRenderingModeAlwaysTemplate : UIImageRenderingModeAlwaysOriginal]];
+    [self cth_setImage:[image imageWithRenderingMode:self.cth_tintImage ? UIImageRenderingModeAlwaysTemplate : UIImageRenderingModeAutomatic]];
 }
 
 #pragma mark - Getters and Setters

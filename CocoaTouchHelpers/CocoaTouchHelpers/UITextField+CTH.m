@@ -39,7 +39,7 @@
 
 - (void)cth_configurePlaceholderColor:(UIColor *)color
 {
-    NSAttributedString *attributedPlaceholder = nil;
+    NSAttributedString *attributedPlaceholder = self.attributedPlaceholder;
     
     if (color != nil) {
         NSString *placeholder = self.placeholder != nil ? self.placeholder : @"";
