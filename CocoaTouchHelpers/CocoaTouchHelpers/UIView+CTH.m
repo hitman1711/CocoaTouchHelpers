@@ -23,12 +23,31 @@
     self.layer.borderColor = color.CGColor;
 }
 
+- (void)cth_configureShadowColor:(UIColor *)color
+{
+    self.layer.shadowColor = color.CGColor;
+}
+
+- (void)cth_configureShadowOpacity:(CGFloat)opacity
+{
+    self.layer.shadowOpacity = opacity;
+}
+
+- (void)cth_configureShadowRadius:(CGFloat)radius
+{
+    self.layer.shadowRadius = radius;
+}
+
+- (void)cth_configureShadowOffset:(CGSize)offset
+{
+    self.layer.shadowOffset = offset;
+}
+
 - (void)cth_configureCircleView:(BOOL)activated
 {
     if (activated) {
         float size = MIN(self.frame.size.width, self.frame.size.height);
         self.layer.cornerRadius = size / 2;
-        self.layer.masksToBounds = YES;
         
     } else {
         self.layer.cornerRadius = 0.f;
@@ -102,6 +121,54 @@
     objc_setAssociatedObject(self, @selector(cth_borderColor), cth_borderColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
     [self cth_configureBorderColor:cth_borderColor];
+}
+
+- (UIColor *)cth_shadowColor
+{
+    return objc_getAssociatedObject(self, @selector(cth_shadowColor));
+}
+
+- (void)setCth_shadowColor:(UIColor *)cth_shadowColor
+{
+    objc_setAssociatedObject(self, @selector(cth_shadowColor), cth_shadowColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    
+    [self cth_configureShadowColor:cth_shadowColor];
+}
+
+- (CGFloat)cth_shadowOpacity
+{
+    return [objc_getAssociatedObject(self, @selector(cth_shadowOpacity)) floatValue];
+}
+
+- (void)setCth_shadowOpacity:(CGFloat)cth_shadowOpacity
+{
+    objc_setAssociatedObject(self, @selector(cth_shadowOpacity), [NSNumber numberWithFloat:cth_shadowOpacity], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    
+    [self cth_configureShadowOpacity:cth_shadowOpacity];
+}
+
+- (CGFloat)cth_shadowRadius
+{
+    return [objc_getAssociatedObject(self, @selector(cth_shadowRadius)) floatValue];
+}
+
+- (void)setCth_shadowRadius:(CGFloat)cth_shadowRadius
+{
+    objc_setAssociatedObject(self, @selector(cth_shadowRadius), [NSNumber numberWithFloat:cth_shadowRadius], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    
+    [self cth_configureShadowRadius:cth_shadowRadius];
+}
+
+- (CGSize)cth_shadowOffset
+{
+    return [objc_getAssociatedObject(self, @selector(cth_shadowOffset)) CGSizeValue];
+}
+
+- (void)setCth_shadowOffset:(CGSize)cth_shadowOffset
+{
+    objc_setAssociatedObject(self, @selector(cth_shadowOffset), [NSValue valueWithCGSize:cth_shadowOffset], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    
+    [self cth_configureShadowOffset:cth_shadowOffset];
 }
 
 @end

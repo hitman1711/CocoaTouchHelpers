@@ -465,6 +465,7 @@
 			baseConfigurationReference = 6B6BAEB0ECC72A03AEFF6A4D /* Pods-CocoaTouchHelpers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = CocoaTouchHelpers/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.felipowsky.$(PRODUCT_NAME:rfc1034identifier)";
@@ -477,6 +478,7 @@
 			baseConfigurationReference = 2712B2E75A89346A57D7CE53 /* Pods-CocoaTouchHelpers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = CocoaTouchHelpers/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.felipowsky.$(PRODUCT_NAME:rfc1034identifier)";
